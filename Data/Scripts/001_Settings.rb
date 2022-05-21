@@ -19,11 +19,11 @@ module Settings
   #=============================================================================
 
   # The default screen width (at a scale of 1.0).
-  SCREEN_WIDTH  = 512
+  SCREEN_WIDTH  = 448*2#370*2
   # The default screen height (at a scale of 1.0).
-  SCREEN_HEIGHT = 384
+  SCREEN_HEIGHT = 252*2#240*2
   # The default screen scale factor. Possible values are 0.5, 1.0, 1.5 and 2.0.
-  SCREEN_SCALE  = 1.0
+  SCREEN_SCALE  = 0.5
 
   #=============================================================================
 
@@ -78,10 +78,10 @@ module Settings
   #=============================================================================
 
   # Whether poisoned Pokémon will lose HP while walking around in the field.
-  POISON_IN_FIELD       = (MECHANICS_GENERATION <= 4)
+  POISON_IN_FIELD       = true
   # Whether poisoned Pokémon will faint while walking around in the field
   # (true), or survive the poisoning with 1 HP (false).
-  POISON_FAINT_IN_FIELD = (MECHANICS_GENERATION <= 3)
+  POISON_FAINT_IN_FIELD = true
   # Whether planted berries grow according to Gen 4 mechanics (true) or Gen 3
   # mechanics (false).
   NEW_BERRY_PLANTS      = (MECHANICS_GENERATION >= 4)
@@ -124,14 +124,14 @@ module Settings
   # second badge, etc.
   #   e.g. To require the second badge, put false and 1.
   #        To require at least 2 badges, put true and 2.
-  BADGE_FOR_CUT       = 1
-  BADGE_FOR_FLASH     = 2
-  BADGE_FOR_ROCKSMASH = 3
-  BADGE_FOR_SURF      = 4
-  BADGE_FOR_FLY       = 5
-  BADGE_FOR_STRENGTH  = 6
-  BADGE_FOR_DIVE      = 7
-  BADGE_FOR_WATERFALL = 8
+  BADGE_FOR_CUT       = 0
+  BADGE_FOR_FLASH     = 0
+  BADGE_FOR_ROCKSMASH = 0
+  BADGE_FOR_SURF      = 0
+  BADGE_FOR_FLY       = 0
+  BADGE_FOR_STRENGTH  = 0
+  BADGE_FOR_DIVE      = 0
+  BADGE_FOR_WATERFALL = 0
 
   #=============================================================================
 
@@ -153,7 +153,7 @@ module Settings
 
   # The name of the person who created the Pokémon storage system.
   def self.storage_creator_name
-    return _INTL("Bill")
+    return _INTL("Boxy")
   end
   # The number of boxes in Pokémon storage.
   NUM_STORAGE_BOXES = 30
@@ -201,8 +201,8 @@ module Settings
   # Dex list, no matter which region the player is currently in.
   def self.pokedex_names
     return [
-      [_INTL("Kanto Pokédex"), 0],
-      [_INTL("Johto Pokédex"), 1],
+      [_INTL("Kroma"), 0],
+      [_INTL("Others"), 1],
       _INTL("National Pokédex")
     ]
   end
@@ -390,6 +390,19 @@ module Settings
     "choice 28"
   ]
 end
+
+#==========
+$Bubble = 0
+
+#==========
+$kojo_update_var = true;
+$kojo_allow_toggle = true;
+#$kojo_talk_var = true
+$kojo_talk_count = 0
+
+NOREFLECTION = [3,32,43,76,77,79,81,83,85,86,92,99,102,106,107,112,116,119,121,122,126,127,130,137,139,152,163,168,187,192,199,205,206,207,213,217]
+
+
 
 # DO NOT EDIT THESE!
 module Essentials
