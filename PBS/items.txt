@@ -604,8 +604,8 @@
 594,SHARPEDONITE,Sharpedonite,Sharpedonites,1,0,"One of a variety of mysterious Mega Stones. Have Sharpedo hold it, and it will be able to Mega Evolve.",0,0,12,
 595,CAMERUPTITE,Cameruptite,Cameruptites,1,0,"One of a variety of mysterious Mega Stones. Have Camerupt hold it, and it will be able to Mega Evolve.",0,0,12,
 596,ALTARIANITE,Altarianite,Altarianites,1,0,"One of a variety of mysterious Mega Stones. Have Altaria hold it, and it will be able to Mega Evolve.",0,0,12,
-597,BANETTITE,Banettite,Banettites,1,0,"One of a variety of mysterious Mega Stones. Have Banette hold it, and it will be able to Mega Evolve.",0,0,12,
-598,ABSOLITE,Absolite,Absolites,1,0,"One of a variety of mysterious Mega Stones. Have Absol hold it, and it will be able to Mega Evolve.",0,0,12,
+597,PARCEL,Parcel,Parcels,8,0,"A parcel made for delivery. What could be inside?",0,0,6,
+598,CUTPROGRAM,Cut Program, Cut Programs,8,0,A program used by Aychem to cut trees.,2,0,6
 599,GLALITITE,Glalitite,Glalitites,1,0,"One of a variety of mysterious Mega Stones. Have Glalie hold it, and it will be able to Mega Evolve.",0,0,12,
 600,SALAMENCITE,Salamencite,Salamencites,1,0,"One of a variety of mysterious Mega Stones. Have Salamence hold it, and it will be able to Mega Evolve.",0,0,12,
 601,METAGROSSITE,Metagrossite,Metagrossites,1,0,"One of a variety of mysterious Mega Stones. Have Metagross hold it, and it will be able to Mega Evolve.",0,0,12,
@@ -646,3 +646,47 @@
 631,NSOLARIZER,N-Solarizer,N-Solarizers,8,0,"A machine to fuse Necrozma, which needs light, and Solgaleo.",5,0,6,
 632,NLUNARIZER,N-Lunarizer,N-Lunarizers,8,0,"A machine to fuse Necrozma, which needs light, and Lunala.",5,0,6,
 633,MEGARING,Mega Ring,Mega Rings,8,0,"This ring contains an untold power that somehow enables Pokémon carrying Mega Stones to Mega Evolve.",0,0,6,
+800,SMASHPROGRAM,Smash Program, Smash Programs,8,0,A program used by Aychem to destroy certain rocks.,2,0,6
+801,SURFPROGRAM,Surf Program, Surf Programs, 8,0,A program used by Aychem to travel over water.,2,0,6
+802,STRENGTHPROGRAM,Strength Program, Strength Programs,8,0,A program used by Aychem to move boulders.,2,0,6
+803,FLYPROGRAM,Fly Program,Fly Programs,8,0,A program used by Aychem to fly.,2,0,6
+804,DIVEPROGRAM,Dive Program,Dive Programs,8,0,A program used by Aychem to dive underwater.,2,0,6
+805,WATERFALLPROGRAM,Waterfall Program,Waterfall Programs,8,0,A program used by Aychem to climb waterfalls.,2,0,6
+806,RAINBOWSTONE,Rainbow Stone,Rainbow Stones,1,2100,A peculiar stone that makes certain species of Pokémon evolve. It has a rainbow pattern.,1,0,7,
+807,SPINEFOSSIL,Spine Fossil,Spine Fossils,1,1000,A fossil of an ancient Pokémon that lived on land. It appears to be part of a spine.,0,0,0,
+808,PLATEFOSSIL,Plate Fossil,Plate Fossils,1,1000,A fossil of an ancient Pokémon that lived on land. It appears to be some sort of plate.,0,0,0,
+809,ANCIENTASH,Ancient Ash, Ancient Ashes,1,1000,A fossilized slab of ash that contains the genetic material of an ancient Pokémon. It has a footprint embedded in it.,0,0,0,
+810,OUTFITONE,Outfit #1,Outfit #1s,8,0,"An outfit for customizing your appearance. Change clothes at a Pokémon Center.",2,0,6,
+811,TM101,TM101,TM101s,4,3000,"The target is cut with a scythe or claw. This can also be used to cut down thin trees.",3,0,0,CUT
+812,DIRTYCLOTHES,Dirty Clothes,Dirty Clothes,8,0,"Some strange dirty clothes. It seems like they belong to someone else.",0,0,6,
+813,TM102,TM102,TM102s,4,3000,"The user spreads rocks over the field that slows down and damages certain Pokémon for five turns.",3,0,0,ROCKYTERRAIN
+814,BARRELKEY,Barrel Key,Barrel Keys,8,0,"A strange key that was found inside a barrel.",0,0,6,
+815,KOWOMNUTITE,Kowomnutite,Kowomnutites,1,1000,"One of the mysterious Mega Stones. Have Kowomnut hold it, and this stone will enable it to Mega Evolve in battle.",0,0,0,
+816,JUMBLITZITE,Jumblitzite,Jumblitzites,1,1000,"One of the mysterious Mega Stones. Have Jumblitz hold it, and this stone will enable it to Mega Evolve in battle.",0,0,0,
+817,PSYKAPTITE,Psykaptite,Psykaptites,1,1000,"One of the mysterious Mega Stones. Have Psykapp hold it, and this stone will enable it to Mega Evolve in battle.",0,0,0,
+818,MACHBIKE,Mach Bike,Mach Bikes,8,0,"A folding Bicycle that enables much faster movement than the Running Shoes.",2,0,6,
+819,ACROBIKE,Acro Bike,Acro Bikes,8,0,"A folding Bicycle that enables much faster movement than the Running Shoes.",2,0,6,
+820,STRANGECOCONUT,Strange Coconut,Strange Coconuts,8,0,"An odd coconut found in the Dry Zone. It doesn't seem edible.",0,0,6,
+821,STRANGEHELMET,Strange Helmet,Strange Helmets,8,0,"An odd helmet found in the Dry Zone. It resembles a stinger.",0,0,6,
+822,DOCTORSKEY,Doctor's Key,Doctor's Keys,8,0,"A key to some building, received from a girl in Patagon City.",0,0,6,
+823,MSTICKET,M.S. Ticket,M.S. Tickets,8,0,"A ticket required to board the M.S. Margo ship to Sandy Town.",0,0,6,
+824,BRAWYAKODON,Brawyakodon,Brawyakodons,2,10000,"A premium dish made from Brawkerel meat. Recovers a quarter of HP and increases Atk.",1,1,0,
+825,CRISPYTHORNYSKIN,Crispy Thornyskin,Crispy Thornyskins,2,10000,"A premium dish made from Thornie skin. Recovers a quarter of HP and increases Def.",1,1,0,
+826,BUTTERSHRIMB,Butter Shrimb,Butter Shrimbs,2,10000,"A premium dish made from Shrimbur claws. Recovers a quarter of HP and increases Sp. Atk.",1,1,0,
+827,AFRIEDOCTOPUS,Afried Octopus,Afried Octopuses,2,10000,"A premium dish made from Anoctopus tentacles. Recovers a quarter of HP and increases Sp. Def.",1,1,0,
+828,PETIYASALAD, Petiya Salad, Petiya Salads,2,10000,"A premium dish made from Petiya leaves. Recovers a quarter of HP and increases Speed.",1,1,0,
+829,KEYRING,Key Ring,Key Rings,8,0,"A ring that holds all the keys to each room on the ship.",0,0,6,
+830,SHIPKEY,Ship Key,Ship Keys,8,0,"A key for something on the ship.",0,0,6,
+831,WHEELSCOUPON,Wheels' Coupon,Wheels' Coupon,8,0,"A discount coupon for a shop.",0,0,6,
+832,TM103,TM103,TM103s,4,3000,"The user pierces the target with sharpened thorns. Hitting a target raises the Attack stat.",3,0,0,THORNS
+833,TM104,TM104,TM104s,4,3000,"The target is attacked with random garbage. The power varies.",3,0,0,JUNKTOSS
+834,QUESTIONABLEDRINK,Questionable Drink,Questionable Drinks,2,1500,"A morally dubious beverage. It restores the HP of one Pokémon by 60 points, but causes confusion.",1,1,0,
+835,TM105,TM105,TM105s,4,1500,"The user lays a trap of levitating stones around the foe. The trap hurts foes that switch into battle.",3,0,0,STEALTHROCK
+836,TM106,TM106,TM106s,4,1500,"The user telepathically forces the target to attack itself. It does more damage the higher the target's Attack stat.",3,0,0,MINDCONTROL
+837,SPECIALSACHET,Special Sachet,Special Sachets,8,0,"A personal Sachet for someone full of a unique perfume.",0,0,6,
+838,TM107,TM107,TM107s,4,1500,"The user attacks the target with a pulsing blast of water. It may also confuse the target.",3,0,0,WATERPULSE
+839,TM108,TM108,TM108s,4,1500,"Absorbs energy from the opponent with a contagious appendage. Poisons the opponent if the user is a Poison-type.",3,0,0,CONTAGIONDRAIN
+840,TOUGHTIRE,Tough Tire,Tough Tires,1,500,"An item to be held by Jurode. It boosts the Defense stat.",0,0,0,
+841,TM109,TM109,TM109s,4,1500,"The user blasts the target with a gust of repulsive wind. It may also raise all the user's stats at once.",3,0,0,OMINOUSWIND
+842,SECGYMKEY,Gym Key,Gym Keys,8,0,"A key found in Kalahari City's Gym.",0,0,6,
+843,TAPLATPAIL,Taplat Pail,Taplat Pails,8,0,"A tool used for watering Berries and plants. Some Pokémon don't like it.",0,0,6,

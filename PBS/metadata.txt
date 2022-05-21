@@ -1,392 +1,1471 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
-[000]
-Home = 3,7,5,8
-WildBattleBGM = Battle wild.mid
-TrainerBattleBGM = Battle trainer.mid
-WildVictoryME = Battle victory wild.ogg
-TrainerVictoryME = Battle victory trainer.ogg
-SurfBGM = Surfing.mid
-BicycleBGM = Bicycle.mid
-PlayerA = POKEMONTRAINER_Red,trainer_POKEMONTRAINER_Red,boy_bike,boy_surf,boy_run,boy_surf,boy_fish_offset,boy_fish_offset
-PlayerB = POKEMONTRAINER_Leaf,trainer_POKEMONTRAINER_Leaf,girl_bike,girl_surf,girl_run,girl_surf,girl_fish_offset,girl_fish_offset
-#-------------------------------
+﻿[000]
+PlayerA=POKEMONTRAINER_Red,trchar000,trrun000,boy_surf_offset,trrun000,boy_dive_offset,trfish000_offset,boy_fishsurf_offset
+PlayerB=POKEMONTRAINER_Leaf,trchar001,trrun001,girl_surf_offset,trrun001,girl_dive_offset,trfish001_offset,girl_fishsurf_offset
+PlayerC=POKEMONTRAINER_Brendan,trchar002,trrun002,boy_surf_offset,trrun002,boy_dive_offset,trfish002_offset,boy_fishsurf_offset
+PlayerD=POKEMONTRAINER_May,trchar003,trrun003,girl_surf_offset,trrun003,girl_dive_offset,trfish003_offset,girl_fishsurf_offset
+TrainerBattleBGM=005-Boss01.mid
+SurfBGM=Ship.mid
+Home=3,1,6,8
+WildBattleBGM=002-Battle02.mid
 [001]
 # Intro
-#-------------------------------
 [002]
 # Lappet Town
-Outdoor = true
-ShowArea = true
-MapPosition = 0,13,12
-BattleBack = field
-#-------------------------------
+MapPosition=0,13,12
+Outdoor=true
+ShowArea=true
 [003]
 # \PN's house
-HealingSpot = 2,8,8
-MapPosition = 0,13,12
-#-------------------------------
+BattleBack=IndoorB
+MapPosition=0,17,8
+HealingSpot=22,48,54
 [004]
 # Pokémon Lab
-ShowArea = false
-MapPosition = 0,13,12
-#-------------------------------
+MapPosition=0,13,12
+ShowArea=false
 [005]
 # Route 1
-Outdoor = true
-ShowArea = true
-MapPosition = 0,13,11
-BattleBack = field
-#-------------------------------
+MapPosition=1,13,11
+Outdoor=true
+ShowArea=true
 [006]
 # Kurt's house
-MapPosition = 0,13,11
-#-------------------------------
+MapPosition=0,13,11
 [007]
 # Cedolan City
-Outdoor = true
-ShowArea = true
-MapPosition = 0,13,10
-MapSize = 2,11
-#-------------------------------
+MapSize=2,11
+MapPosition=0,13,10
+Outdoor=true
+ShowArea=true
 [008]
 # Daisy's house
-MapPosition = 0,13,12
-#-------------------------------
+MapPosition=0,13,12
 [009]
 # Cedolan City Poké Center
-HealingSpot = 8,17,11
-MapPosition = 0,14,10
-#-------------------------------
+MapPosition=0,14,10
+HealingSpot=8,17,11
 [010]
 # Cedolan Gym
-MapPosition = 0,13,10
-BattleBack = indoor3
-Environment = Rock
-#-------------------------------
+BattleBack=IndoorB
+MapPosition=0,13,10
 [011]
 # Pokémon Institute
-MapPosition = 0,14,10
-#-------------------------------
+MapPosition=0,14,10
 [012]
 # Cedolan City Condo
-MapPosition = 0,14,10
-#-------------------------------
+MapPosition=0,14,10
 [013]
 # Game Corner
-MapPosition = 0,14,10
-#-------------------------------
+MapPosition=0,14,10
 [014]
 # Cedolan Dept. 1F
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [015]
 # Cedolan Dept. 2F
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [016]
 # Cedolan Dept. 3F
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [017]
 # Cedolan Dept. 4F
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [018]
 # Cedolan Dept. 5F
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [019]
 # Cedolan Dept. Rooftop
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [020]
 # Cedolan Dept. Elevator
-MapPosition = 0,13,10
-#-------------------------------
+MapPosition=0,13,10
 [021]
 # Route 2
-Outdoor = true
-ShowArea = true
-Weather = Rain,100
-MapPosition = 0,14,8
-BattleBack = field
-MapSize = 1,11
-#-------------------------------
+MapSize=1,11
+Weather=Rain,50
+MapPosition=1,14,8
+Outdoor=true
+ShowArea=true
+[022]
+# Lildune Town
+BattleBack=Field
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,17,8
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
 [023]
 # Lerucean Town
-Outdoor = true
-ShowArea = true
-MapPosition = 0,15,8
-#-------------------------------
+MapPosition=0,15,8
+Outdoor=true
+ShowArea=true
 [024]
 # Lerucean Town Poké Center
-HealingSpot = 23,11,15
-MapPosition = 0,15,8
-#-------------------------------
+MapPosition=0,15,8
+HealingSpot=23,11,15
 [025]
 # Lerucean Town Mart
-MapPosition = 0,15,8
-#-------------------------------
+MapPosition=0,15,8
 [026]
 # Pokémon Fan Club
-MapPosition = 0,15,8
-#-------------------------------
+MapPosition=0,15,8
 [027]
 # Pokémon Day Care
-MapPosition = 0,15,8
-#-------------------------------
+MapPosition=0,15,8
 [028]
 # Natural Park
-Outdoor = true
-ShowArea = true
-MapPosition = 0,16,8
-BattleBack = field
-#-------------------------------
+BattleBack=Forest
+MapPosition=0,16,8
+Outdoor=true
+ShowArea=true
 [029]
 # Natural Park Entrance
-Bicycle = true
-MapPosition = 0,16,8
-#-------------------------------
+Bicycle=true
+MapPosition=0,16,8
 [030]
 # Natural Park Pavillion
-MapPosition = 0,16,8
-#-------------------------------
+MapPosition=0,16,8
 [031]
 # Route 3
-Outdoor = true
-ShowArea = true
-MapPosition = 0,14,6
-BattleBack = field
-MapSize = 2,1101
-#-------------------------------
+MapSize=2,1101
+MapPosition=1,14,6
+Outdoor=true
+ShowArea=true
+[032]
+# Lildune Lab
+MapPosition=0,17,8
+[033]
+# Route 2
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,16,6
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
 [034]
 # Ice Cave
-Bicycle = true
-MapPosition = 0,15,6
-BattleBack = cave1
-Environment = Cave
-#-------------------------------
+BattleBack=IndoorC
+Bicycle=true
+MapPosition=1,15,6
 [035]
 # Ingido Plateau
-Outdoor = true
-ShowArea = true
-MapPosition = 0,13,6
-#-------------------------------
+MapPosition=0,13,6
+Outdoor=true
+ShowArea=true
 [036]
 # Pokémon League
-HealingSpot = 35,17,7
-MapPosition = 0,13,6
-#-------------------------------
+MapPosition=0,13,6
+HealingSpot=35,17,7
 [037]
 # Pokémon League
-MapPosition = 0,13,6
-BattleBack = elite1
-#-------------------------------
+BattleBack=EliteA
+MapPosition=0,13,6
 [038]
 # Hall of Fame
-MapPosition = 0,13,6
-#-------------------------------
+MapPosition=0,13,6
 [039]
 # Route 4
-Outdoor = true
-ShowArea = true
-MapPosition = 0,11,6
-BattleBack = field
-MapSize = 2,11
-#-------------------------------
+MapSize=2,11
+MapPosition=1,11,6
+Outdoor=true
+ShowArea=true
 [040]
 # Route 4
-Outdoor = true
-ShowArea = true
-BicycleAlways = true
-MapPosition = 0,11,6
-#-------------------------------
+MapPosition=1,11,6
+Outdoor=true
+BicycleAlways=true
+ShowArea=true
 [041]
 # Route 5
-Outdoor = true
-ShowArea = true
-BicycleAlways = true
-MapPosition = 0,11,7
-MapSize = 1,111
-#-------------------------------
+MapSize=1,111
+MapPosition=1,11,7
+Outdoor=true
+BicycleAlways=true
+ShowArea=true
+[042]
+# Route 1
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,17,7
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[043]
+#Nite's House
+MapPosition=0,17,8
 [044]
 # Route 6
-Outdoor = true
-ShowArea = true
-MapPosition = 0,11,10
-BattleBack = field
-MapSize = 2,11
-#-------------------------------
+MapSize=2,11
+MapPosition=0,11,10
+Outdoor=true
+ShowArea=true
 [045]
 # Route 6
-Outdoor = true
-ShowArea = true
-BicycleAlways = true
-MapPosition = 0,11,10
-#-------------------------------
+MapPosition=0,11,10
+Outdoor=true
+BicycleAlways=true
+ShowArea=true
 [046]
 # Cycling Road gate
-Bicycle = true
-MapPosition = 0,12,6
-#-------------------------------
+Bicycle=true
+MapPosition=0,12,6
 [047]
 # Route 7
-Outdoor = true
-ShowArea = true
-Weather = Rain,0
-MapPosition = 0,15,10
-BattleBack = rocky
-MapSize = 2,11
-Environment = Rock
-#-------------------------------
+BattleBack=Mountain
+Weather=Rain,0
+MapPosition=0,15,10
+Outdoor=true
+ShowArea=true
+[048]
+# Taldune Town
+BattleBack=Field
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,17,6
+Outdoor=true
+ShowArea=true
+SnapEdges=true
 [049]
 # Rock Cave
-Bicycle = true
-MapPosition = 0,16,10
-BattleBack = cave1
-Environment = Cave
-#-------------------------------
+Bicycle=true
+MapPosition=0,16,10
 [050]
 # Rock Cave
-Bicycle = true
-MapPosition = 0,16,10
-DarkMap = true
-BattleBack = cave3
-Environment = Cave
-#-------------------------------
+BattleBack=CaveDark
+Bicycle=true
+MapPosition=0,16,10
+DarkMap=true
 [051]
 # Dungeon
-Bicycle = true
-MapPosition = 0,16,10
-Dungeon = true
-BattleBack = cave2
-Environment = Cave
-#-------------------------------
+Bicycle=true
+Dungeon=true
+MapPosition=0,16,10
 [052]
 # Battle Frontier
-Outdoor = true
-ShowArea = true
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
+Outdoor=true
+ShowArea=true
 [053]
 # Battle Frontier Poké Center
-HealingSpot = 52,17,14
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
+HealingSpot=52,17,14
 [054]
 # Battle Frontier Mart
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [055]
 # Battle Tower
-HealingSpot = 52,30,10
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
+HealingSpot=52,30,10
 [056]
 # Battle Tower arena
-MapPosition = 0,17,10
-BattleBack = indoor1
-#-------------------------------
+BattleBack=EliteA
+MapPosition=0,17,10
 [057]
 # Stadium Cup lobby
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [058]
 # Battle Palace
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [059]
 # Battle Palace arena
-MapPosition = 0,17,10
-BattleBack = indoor1
-#-------------------------------
+BattleBack=EliteD
+MapPosition=0,17,10
 [060]
 # Battle Arena
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [061]
 # Battle Arena arena
-MapPosition = 0,17,10
-BattleBack = indoor1
-#-------------------------------
+BattleBack=EliteB
+MapPosition=0,17,10
 [062]
 # Battle Factory
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [063]
 # Battle Factory intro corridor
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [064]
 # Battle Factory arena
-MapPosition = 0,17,10
-BattleBack = indoor1
-#-------------------------------
+BattleBack=EliteC
+MapPosition=0,17,10
 [065]
 # Battle Factory corridor
-MapPosition = 0,17,10
-#-------------------------------
+MapPosition=0,17,10
 [066]
 # Safari Zone
-Outdoor = true
-ShowArea = true
-MapPosition = 0,12,12
-BattleBack = field
-#-------------------------------
+MapPosition=0,12,12
+Outdoor=true
+ShowArea=true
 [067]
 # Safari Zone gate
-MapPosition = 0,12,12
-#-------------------------------
+MapPosition=0,12,12
 [068]
 # Safari Zone
-Outdoor = true
-ShowArea = true
-MapPosition = 0,12,12
-SafariMap = true
-BattleBack = forest
-Environment = Forest
-#-------------------------------
+BattleBack=Forest
+MapPosition=0,12,12
+SafariMap=true
+Outdoor=true
+ShowArea=true
 [069]
 # Route 8
-Outdoor = true
-ShowArea = true
-MapPosition = 0,13,13
-DiveMap = 70
-BattleBack = field
-#-------------------------------
+DiveMap=70
+MapPosition=0,13,13
+Outdoor=true
+ShowArea=true
 [070]
 # Underwater
-MapPosition = 0,13,13
-BattleBack = underwater
-Environment = Underwater
-#-------------------------------
+MapPosition=0,13,13
 [071]
-# Harbor
-MapPosition = 0,13,13
-#-------------------------------
+# Harbour
+MapPosition=0,13,13
 [072]
-# Berth Island
-Outdoor = true
-ShowArea = true
-Weather = Storm,50
-MapPosition = 0,18,17
-BattleBack = field
-#-------------------------------
+# Daroxy Island
+Weather=Storm,50
+MapPosition=0,18,17
+Outdoor=true
+ShowArea=true
 [073]
 # Faraday Island
-Outdoor = true
-ShowArea = true
-MapPosition = 0,22,16
-BattleBack = field
-#-------------------------------
+MapPosition=0,22,16
+Outdoor=true
+ShowArea=true
 [074]
 # Cycling Road gate
-Bicycle = true
-MapPosition = 0,12,10
-#-------------------------------
+Bicycle=true
+MapPosition=0,12,10
 [075]
 # Tiall Region
-Outdoor = true
-MapPosition = 1,13,16
-BattleBack = city
+MapPosition=1,13,16
+Outdoor=true
+[076]
+# Taldune PokeCenter
+MapPosition=0,17,6
+[077]
+#Eve's House
+MapPosition=0,17,8
+[078]
+# Route 3
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,18,6
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[079]
+#Taldune Houses
+MapPosition=0,17,6
+[080]
+# Gobi Forest
+BattleBack=Forest
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,15,6
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[081]
+#Lildune Houses
+MapPosition=0,17,8
+[082]
+# Route 4
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,6
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[083]
+# Ninja House
+BattleBack=InteriorWood
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,6
+Outdoor=false
+BicycleAlways=false
+[084]
+# Gobi Village
+BattleBack=GymA
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,7
+Outdoor=true
+ShowArea=true
+SnapEdges=true
+[085]
+#Gobi Houses
+MapPosition=0,13,7
+[086]
+#Gobi Pokémon Center
+MapPosition=0,13,7
+[087]
+#Pokemon Day Care
+MapPosition=0,13,7
+[088]
+# Gobi Village Gym
+BattleBack=InteriorWood
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,7
+Outdoor=false
+[089]
+# Route 5
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,8
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[090]
+# Farm
+BattleBack=Farm
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,8
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=false
+SnapEdges=true
+[091]
+# Color Rock
+BattleBack=Mountain
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+TrainerVictoryME=ME03trainervictory.ogg
+MapPosition=0,13,10
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[092]
+#Color Rock
+MapPosition=0,13,10
+[093]
+# Color Rock Base
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[094]
+# Color Rock Base
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[095]
+# Color Rock Base
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[096]
+# Color Rock Outdoors
+BattleBack=Mountain
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,11
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+SnapEdges=true
+[097]
+# Color Rock Base
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[098]
+# Kalahari City
+BattleBack=Mountain
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,17
+Outdoor=true
+ShowArea=true
+SnapEdges=true
+[099]
+# Kalahari Gym
+BattleBack=Gym2
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,17
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[100]
+# Route 6
+BattleBack=DesertCity
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,12
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[101]
+# Sahara City
+MapPosition=0,8,12
+Outdoor=true
+ShowArea=true
+SnapEdges=true
+[102]
+# Sahara Gates
+MapPosition=0,8,12
+[103]
+# Route 7
+BattleBack=BeachGrassy
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,11
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[104]
+# Route 7
+BattleBack=Beach
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,11
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[105]
+# Sahara Sewer
+BattleBack=Sewer
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,12
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[106]
+# Sahara Pokemon Center
+MapPosition=0,8,11
+[107]
+# Fisher's House
+MapPosition=0,4,11
+[108]
+# Route 8
+BattleBack=Urban
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,13
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[109]
+# Route 10
+BattleBack=Mountain
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,17
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[110]
+# Kalahari Outskirts
+BattleBack=Mountain
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,17
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[111]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,19
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[112]
+#Berry House
+MapPosition=0,15,6
+[113]
+# Route 12
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[114]
+# Mojave Town
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,4
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[115]
+# Route 9
+BattleBack=Mountain
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,17
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[116]
+# Sahara Circus
+BattleBack=Circus
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=001-Victory01.mid
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,11
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=002-Battle02.mid
+ShowArea=false
+[117]
+#Mojave Houses
+MapPosition=0,8,4
+[118]
+# Route 12
+TrainerVictoryME=001-Victory01.mid
+WildVictoryME=001-Victory01.mid
+TrainerBattleBGM=002-Battle02.mid
+Outdoor=true
+WildBattleBGM=002-Battle02.mid
+SnapEdges=true
+[119]
+# Resort
+MapPosition=0,6,11
+[120]
+# Patagon City
+Bicycle=true
+MapPosition=0,4,17
+Outdoor=true
+ShowArea=true
+SnapEdges=true
+[121]
+# Kalahari Houses
+MapPosition=0,9,17
+Outdoor=false
+ShowArea=true
+[122]
+# Sahara Houses
+BattleBack=InteriorSahara
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,6,10
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[123]
+# Route 9 Gates
+Bicycle=true
+Outdoor=false
+ShowArea=false
+[124]
+# Fossil Labs
+MapPosition=0,9,17
+[125]
+# Bike Gate
+Bicycle=true
+MapPosition=0,11,6
+Outdoor=false
+[126]
+# Kalahari Pokemon Center
+MapPosition=0,9,17
+[127]
+# Sahara Houses 2
+BattleBack=InteriorSahara
+Outdoor=false
+MapPosition=0,7,11
+[128]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,17
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[129]
+# Kalahari Museum
+MapPosition=0,9,17
+[130]
+#Farm
+MapPosition=0,12,8
+[131]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,17
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[132]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,18
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[133]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,17
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+SnapEdges=true
+[135]
+#Truck
+MapPosition=0,9,12
+[136]
+# Cutter's Grove
+Bicycle=false
+MapPosition=0,12,7
+Outdoor=true
+BicycleAlways=false
+ShowArea=true
+SnapEdges=true
+[137]
+# Cutter's House
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,12,7
+Outdoor=false
+ShowArea=false
+[138]
+# Pitch Cave
+BattleBack=Cave
+Bicycle=true
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,16,7
+DarkMap=true
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[139]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,17
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[140]
+# Pitch Cave
+Bicycle=true
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,16,7
+DarkMap=true
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[141]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,19
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[142]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,19
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[143]
+# Old Sahara
+BattleBack=Urban
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,10
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[144]
+# Route 11
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,6,17
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[145]
+# Patagon Houses
+BattleBack=InteriorPowerPlant
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,17
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[146]
+# Sandy Town
+BattleBack=BeachGrassy
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,13
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[147]
+# Route 7 
+BattleBack=BeachGrassy
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,11
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[148]
+# Cycling Road
+BattleBack=Urban
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,11,6
+Outdoor=true
+BicycleAlways=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[149]
+#Patagon Gate
+MapPosition=0,5,17
+[150]
+#Prism Co
+MapPosition=0,4,17
+[151]
+#Patagon Elevator
+MapPosition=0,4,17
+[152]
+#Patagon Pokemon Center
+MapPosition=0,4,17
+[153]
+#Arcade
+MapPosition=0,3,17
+[155]
+# Patagon Dump
+BattleBack=Dump
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,3,18
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[156]
+# Sandy Bay
+BattleBack=Beach
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,14
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[157]
+# Sandy Cove
+BattleBack=Cove
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[158]
+# Sandy Cove
+BattleBack=Beach
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,12
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[159]
+# Sandy Cove
+BattleBack=Cove
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[160]
+# Sandy Cove
+BattleBack=Cove
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,12
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[161]
+# The Hoodoos
+BattleBack=Beach
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,13
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+SnapEdges=true
+[162]
+# Sandy Cove
+BattleBack=Beach
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,12
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+SnapEdges=true
+[164]
+# Kitchen
+MapPosition=0,4,13
+[165]
+# Barb's Salon
+MapPosition=0,4,13
+[166]
+# Ferry
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=false
+ShowArea=false
+[167]
+# Ferry - Exterior
+BattleBack=Beach
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[168]
+# Ferry
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=false
+ShowArea=false
+[169]
+# Power Plant
+BattleBack=InteriorPowerPlantSolar
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,16
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[170]
+# Solar Room
+BattleBack=InteriorPowerPlantSolar
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,16
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[171]
+# Hydro Room
+BattleBack=InteriorPowerPlantHydro
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,16
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[172]
+# Electricity Room
+BattleBack=InteriorPowerPlant
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,16
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[173]
+# Solar Array
+MapPosition=0,5,16
+SnapEdges=true
+[174]
+# Windmill
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,17
+Outdoor=false
+ShowArea=false
+[176]
+# Sewer
+BattleBack=Sewer
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,3,18
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[177]
+# Sewer
+BattleBack=Sewer
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,3,18
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[178]
+# Sewer
+BattleBack=Sewer
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,3,18
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+[179]
+# Control Room
+MapPosition=0,5,16
+[180]
+# Sandy Houses
+MapPosition=0,4,13
+[181]
+# Abandoned House
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,10
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+[182]
+# Wet Zone
+Weather=Rain,100
+BattleBack=Forest
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,5
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[183]
+# Dry Zone
+BattleBack=DryZone
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,9,5
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[184]
+# Mojave Jungle
+BattleBack=Forest
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,7
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[185]
+# Mojave Gym
+BattleBack=MojaveLeader
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,4
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=false
+[186]
+# Flower Shop
+MapPosition=0,8,4
+[187]
+# Mojave Pokemon Center
+MapPosition=0,8,4
+[188]
+# Mojave Jungle
+BattleBack=Forest
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,5
+Outdoor=true
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[189]
+# Ninja House
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,5
+Outdoor=false
+ShowArea=false
+[190]
+# Ferry
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=false
+ShowArea=false
+[191]
+# Ferry
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=false
+ShowArea=false
+[192]
+# Ferry
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=false
+ShowArea=false
+[193]
+# Hydro Room
+BattleBack=InteriorPowerPlantHydro
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,6,10
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[194]
+# Control Room
+BattleBack=InteriorPowerPlant
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,16
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[195]
+# Control Room
+BattleBack=InteriorPowerPlant
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,5,16
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+DarkMap=true
+[196]
+# Control Room
+MapPosition=0,5,16
+[197]
+# Patagon Houses
+BattleBack=InteriorPowerPlant
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,17
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[200]
+# Bridge
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,2,16
+Outdoor=false
+ShowArea=false
+[202]
+# Fe72ry
+BattleBack=Dream
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[204]
+# Sandy Hotel
+MapPosition=0,4,13
+[205]
+# Bike Shop
+BattleBack=InteriorSahara
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,12
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[206]
+# Sahara Houses
+BattleBack=InteriorSahara
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,11
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[207]
+# Sahara Houses
+BattleBack=InteriorSahara
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,11
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[208]
+# Mojave Gym
+BattleBack=InteriorMojave
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,8
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=false
+[209]
+# Mojave Gym
+BattleBack=Forest
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,8,4
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=false
+[210]
+# Kalahari Mine
+BattleBack=Cave
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,17
+Outdoor=false
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+[211]
+# Ninja House
+BattleBack=InteriorWood
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,10,17
+Outdoor=false
+ShowArea=false
+[212]
+# Kitchen
+BattleBack=InteriorPowerPlant
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,4,13
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[213]
+# Sahara Houses
+BattleBack=InteriorSahara
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,11
+Outdoor=false
+WildBattleBGM=36wildbattle.ogg
+[214]
+# Gobi Village Gym
+BattleBack=InteriorWood
+Bicycle=false
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,7
+Outdoor=false
+[215]
+# Gobi Village Gym Exterior
+BattleBack=GymA
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,13,7
+Outdoor=true
+ShowArea=true
+SnapEdges=true
+[216]
+# Kolora Outpost
+BattleBack=Mountain
+Bicycle=true
+TrainerVictoryME=ME03trainervictory.ogg
+WildVictoryME=ME02wildvictory.ogg
+TrainerBattleBGM=trainer.ogg
+MapPosition=0,7,15
+Outdoor=true
+BicycleAlways=false
+WildBattleBGM=36wildbattle.ogg
+ShowArea=true
+SnapEdges=true
+[217]
+# Outpost Pokemon Center
+MapPosition=0,7,15
+[218]
+# Kolora Outpost
+MapPosition=0,7,15

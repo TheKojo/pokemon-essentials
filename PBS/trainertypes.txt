@@ -1,74 +1,126 @@
 ﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
-0,POKEMONTRAINER_Red,Pokémon Trainer,60,,,,Male,,
-1,POKEMONTRAINER_Leaf,Pokémon Trainer,60,,,,Female,,
-2,POKEMONTRAINER_Brendan,Pokémon Trainer,60,,,,Male,,
-3,POKEMONTRAINER_May,Pokémon Trainer,60,,,,Female,,
-4,RIVAL1,Rival,16,,,,Male,,
-5,RIVAL2,Rival,36,,,,Male,,
-6,AROMALADY,Aroma Lady,32,,,,Female,,
-7,BEAUTY,Beauty,56,,,,Female,,
-8,BIKER,Biker,32,,,,Male,,
-9,BIRDKEEPER,Bird Keeper,32,,,,Male,,
-10,BUGCATCHER,Bug Catcher,16,,,,Male,,
-11,BURGLAR,Burglar,88,,,,Male,32,
-12,CHANELLER,Channeler,32,,,,Female,,
-13,CUEBALL,Cue Ball,24,,,,Male,,
-14,ENGINEER,Engineer,48,,,,Male,,
-15,FISHERMAN,Fisherman,32,,,,Male,,
-16,GAMBLER,Gambler,72,,,,Male,32,
-17,GENTLEMAN,Gentleman,72,,,,Male,,
-18,HIKER,Hiker,32,,,,Male,,
-19,JUGGLER,Juggler,32,,,,Male,,
-20,LADY,Lady,160,,,,Female,72,
-21,PAINTER,Painter,16,,,,Female,,
-22,POKEMANIAC,Poké Maniac,64,,,,Male,,
-23,POKEMONBREEDER,Pokémon Breeder,48,,,,Female,,
-24,PROFESSOR,Professor,100,,,,Male,,
-25,ROCKER,Rocker,24,,,,Male,,
-26,RUINMANIAC,Ruin Maniac,48,,,,Male,,
-27,SAILOR,Sailor,32,,,,Male,,
-28,SCIENTIST,Scientist,48,,,,Male,,
-29,SUPERNERD,Super Nerd,48,,,,Male,,
-30,TAMER,Tamer,40,,,,Male,,
-31,BLACKBELT,Black Belt,32,,,,Male,,
-32,CRUSHGIRL,Crush Girl,24,,,,Female,,
-33,CAMPER,Camper,16,,,,Male,,
-34,PICNICKER,Picnicker,16,,,,Female,,
-35,COOLTRAINER_M,Cool Trainer,60,,,,Male,,
-36,COOLTRAINER_F,Cool Trainer,60,,,,Female,,
-37,YOUNGSTER,Youngster,16,,,,Male,,
-38,LASS,Lass,16,,,,Female,,
-39,POKEMONRANGER_M,Pokémon Ranger,60,,,,Male,,
-40,POKEMONRANGER_F,Pokémon Ranger,60,,,,Female,,
-41,PSYCHIC_M,Psychic,32,,,,Male,,
-42,PSYCHIC_F,Psychic,32,,,,Female,,
-43,SWIMMER_M,Swimmer,16,,,,Male,32,
-44,SWIMMER_F,Swimmer,16,,,,Female,32,
-45,SWIMMER2_M,Swimmer,16,,,,Male,32,
-46,SWIMMER2_F,Swimmer,16,,,,Female,32,
-47,TUBER_M,Tuber,4,,,,Male,16,
-48,TUBER_F,Tuber,4,,,,Female,16,
-49,TUBER2_M,Tuber,4,,,,Male,16,
-50,TUBER2_F,Tuber,4,,,,Female,16,
-51,COOLCOUPLE,Cool Couple,72,,,,Mixed,48,
-52,CRUSHKIN,Crush Kin,48,,,,Mixed,,
-53,SISANDBRO,Sis and Bro,16,,,,Mixed,48,
-54,TWINS,Twins,24,,,,Mixed,,
-55,YOUNGCOUPLE,Young Couple,60,,,,Mixed,32,
-56,TEAMROCKET_M,Team Rocket,32,,,,Male,,
-57,TEAMROCKET_F,Team Rocket,32,,,,Female,,
-58,ROCKETBOSS,Rocket Boss,100,,,,Male,,
-59,LEADER_Brock,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Male,,
-60,LEADER_Misty,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Female,,
-61,LEADER_Surge,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Male,,
-62,LEADER_Erika,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Female,,
-63,LEADER_Koga,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Male,,
-64,LEADER_Sabrina,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Female,,
-65,LEADER_Blaine,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Male,,
-66,LEADER_Giovanni,Gym Leader,100,Battle Gym Leader,Battle victory leader,,Male,,
-67,ELITEFOUR_Lorelei,Elite Four,100,Battle Elite,Battle victory leader,,Female,,
-68,ELITEFOUR_Bruno,Elite Four,100,Battle Elite,Battle victory leader,,Male,,
-69,ELITEFOUR_Agatha,Elite Four,100,Battle Elite,Battle victory leader,,Female,,
-70,ELITEFOUR_Lance,Elite Four,100,Battle Elite,Battle victory leader,,Male,,
-71,CHAMPION,Champion,100,Battle Elite,Battle victory leader,,Male,,
+0,POKEMONTRAINER_Red,Pokémon Trainer,60,,,,Male,
+1,POKEMONTRAINER_Leaf,Pokémon Trainer,60,,,,Female,
+2,POKEMONTRAINER_Brendan,Pokémon Trainer,60,,,,Male,
+3,POKEMONTRAINER_May,Pokémon Trainer,60,,,,Female,
+4,RIVAL1,Rival,16,,,,Male,
+5,RIVAL2,Rival,36,,,,Male,
+6,AROMALADY,Aroma Lady,32,,,ME09lass.ogg,Female,
+7,BEAUTY,Beauty,56,,,ME09lass.ogg,Female,
+8,BIKER,Biker,32,,,ME17punk.ogg,Male,100
+9,BIRDKEEPER,Bird Keeper,32,,,ME05youngster.ogg,Male,
+10,BUGCATCHER,Bug Catcher,16,,,ME05youngster.ogg,Male,40
+11,BURGLAR,Burglar,88,,,,Male,32
+12,CHANELLER,Channeler,32,,,,Female,
+13,CUEBALL,Cue Ball,24,,,,Male,
+14,ENGINEER,Worker,48,,,ME14blackbelt.ogg,Male,
+15,FISHERMAN,Fisherman,32,,,ME13hiker.ogg,Male,
+16,GAMBLER,Gambler,72,,,,Male,32
+17,GENTLEMAN,Gentleman,72,,,ME19richboy.ogg,Male,100
+18,HIKER,Hiker,32,,,ME13hiker.ogg,Male,100
+19,JUGGLER,Juggler,32,,,,Male,
+20,LADY,Lady,160,,,,Female,72
+21,PAINTER,Painter,16,,,,Female,
+22,POKEMANIAC,Poké Maniac,100,,,,Male,
+23,POKEMONBREEDER,Pokémon Breeder,48,,,ME06pokefan.ogg,Female,
+24,PROFESSOR,Professor,100,,,,Male,
+25,ROCKER,Rocker,24,,,,Male,
+26,RUINMANIAC,Ruin Maniac,32,,,ME13hiker.ogg,Male,100
+27,SAILOR,Sailor,32,,,ME13hiker.ogg,Male,
+28,SCIENTIST,Scientist,48,,,,Male,
+29,SUPERNERD,Super Nerd,48,,,,Male,
+30,TAMER,Tamer,40,,,,Male,
+31,BLACKBELT,Black Belt,32,,,ME14blackbelt.ogg,Male,
+32,CRUSHGIRL,Battle Girl,24,,,ME14blackbelt.ogg,Female,
+33,CAMPER,Camper,16,,,ME06pokefan.ogg,Male,40
+34,PICNICKER,Picnicker,16,,,ME06pokefan.ogg,Female,40
+35,COOLTRAINER_M,Cool Trainer,60,,,,Male,
+36,COOLTRAINER_F,Cool Trainer,60,,,,Female,
+37,YOUNGSTER,Youngster,16,,,ME05youngster.ogg,Male,
+38,LASS,Lass,16,,,ME09lass.ogg,Female,
+39,POKEMONRANGER_M,Pokémon Ranger,60,,,ME13hiker.ogg,Male,
+40,POKEMONRANGER_F,Pokémon Ranger,60,,,ME13hiker.ogg,Female,
+41,PSYCHIC_M,Psychic,32,,,,Male,
+42,PSYCHIC_F,Psychic,32,,,,Female,
+43,SWIMMER_M,Swimmer,16,,,,Male,32
+44,SWIMMER_F,Swimmer,16,,,,Female,32
+45,SWIMMER2_M,Swimmer,16,,,,Male,32
+46,SWIMMER2_F,Swimmer,16,,,,Female,32
+47,TUBER_M,Tuber,4,,,ME06pokefan.ogg,Male,16
+48,TUBER_F,Tuber,4,,,ME06pokefan.ogg,Female,16
+49,TUBER2_M,Tuber,4,,,ME06pokefan.ogg,Male,16
+50,TUBER2_F,Tuber,4,,,ME06pokefan.ogg,Female,16
+51,COOLCOUPLE,Cool Couple,72,,,ME06pokefan.ogg,Mixed,48
+52,CRUSHKIN,Crush Kin,48,,,,Mixed,
+53,SISANDBRO,Sis and Bro,16,,,,Mixed,48
+54,TWINS,Twins,24,,,,Mixed,
+55,YOUNGCOUPLE,Young Couple,60,,,ME15couple.ogg,Mixed,32
+56,TEAMROCKET_M,Team Rocket,32,,,,Male,
+57,TEAMROCKET_F,Team Rocket,32,,,,Female,
+58,ROCKETBOSS,Rocket Boss,100,,,,Male,
+59,LEADER_Brock,Gym Leader,100,gymleader,,,Male,
+60,LEADER_Misty,Gym Leader,100,gymleader,,,Female,
+61,LEADER_Surge,Gym Leader,100,gymleader,,,Male,
+62,LEADER_Erika,Gym Leader,100,gymleader,,,Female,
+63,LEADER_Koga,Gym Leader,100,gymleader,,,Male,
+64,LEADER_Sabrina,Gym Leader,100,gymleader,,,Female,
+65,LEADER_Blaine,Gym Leader,100,gymleader,,,Male,
+66,LEADER_Giovanni,Gym Leader,100,gymleader,,,Male,
+67,ELITEFOUR_Lorelei,Elite Four,100,elite,,,Female,
+68,ELITEFOUR_Bruno,Elite Four,100,elite,,,Male,
+69,ELITEFOUR_Agatha,Elite Four,100,elite,,,Female,
+70,ELITEFOUR_Lance,Elite Four,100,elite,,,Male,
+71,CHAMPION,Champion,100,elite,,,Male,
+72,TRAINERNITE,Trainer,50,09rivalbattle.ogg,,ME20rivalmeet.ogg,Male,100
+73,TRAINERSOL,Trainer,40,09rivalbattle.ogg,,ME20rivalmeet.ogg,Male,100
+74,PRESCHOOLER,Preschooler,10,,,ME06pokefan.ogg,Male,100
+75,PRESCHOOLER_1,Preschooler,10,,,ME06pokefan.ogg,Female,100
+76,EVE,Trainer,40,09rivalbattle.ogg,,ME20rivalmeet.ogg,Female,100
+77,NINJABOY,Ninja Boy,30,,,,Male,50
+78,GYMLEADER,Gym Leader,100,08gymbattle.ogg,ME01gymvictory.ogg,,Female,100
+79,PROFESSOR_1,Professor,50,,,,Male,100
+80,ANONYMOUS_G,Anonymous,32,34anonbattle.ogg,,ME16anonymous.ogg,Male,100
+81,ANONYMOUS_Y,Anonymous,32,34anonbattle.ogg,,ME16anonymous.ogg,Female,100
+82,HARLEQUIN,Harlequin,30,,,ME19richboy.ogg,Male,70
+83,FIREBREATHER,Firebreather,30,,,ME17punk.ogg,Male,70
+84,JESTRI,Gym Leader,100,,,,Male,100
+85,CYCLIST,Cyclist,32,,,ME18cycler.ogg,Male,
+86,CYCLIST_F,Cyclist,32,,,ME18cycler.ogg,Female,
+87,POKEFAN,Poké Fan,64,,,ME06pokefan.ogg,Male,
+88,POKEFAN_F,Poké Fan,64,,,ME06pokefan.ogg,Female,
+89,POKEKID,Poké Kid,64,,,,Female,
+90,RICHBOY,Rich Boy,100,,,ME19richboy.ogg,Male,
+91,SCIENTIST_F,Scientist,48,,,,Female,
+92,LEADER_ROCK,Gym Leaders,100,08gymbattle.ogg,ME01gymvictory.ogg,,Mixed,100
+93,ANONYMOUS_O,Anonymous,32,34anonbattle.ogg,,ME16anonymous.ogg,Male,100
+94,ANONYMOUS_B,Anonymous,32,34anonbattle.ogg,,ME16anonymous.ogg,Female,100
+95,ROY,Anonymous Admin,32,35anonadminbattle.ogg,,ME16anonymous.ogg,Male,100
+96,GUITARIST,Guitarist,32,,,ME17punk.ogg,Female,
+97,POKEMONBREEDER_M,Pokémon Breeder,48,,,ME06pokefan.ogg,Male,80
+98,BACKPACKER_M,Backpacker,32,,,ME13hiker.ogg,Male,80
+99,BACKPACKER_F,Backpacker,32,,,ME13hiker.ogg,Female,80
+100,SCHOOLKID_M,Schoolkid,32,,,ME05youngster.ogg,Male,60
+101,SCHOOLKID_F,Schoolkid,32,,,ME09lass.ogg,Male,,60
+102,ROUGHNECK,Roughneck,32,,,ME17punk.ogg,Male,60
+103,DANCER,Dancer,32,,,ME18cycler.ogg,Male,60
+104,JANITOR,Janitor,32,,,ME14blackbelt.ogg,Male,60
+105,POLICEMAN,Policeman,32,,,ME14blackbelt.ogg,Male,60
+106,PUNK,Punk Boy,32,,,ME17punk.ogg,Male,60
+107,HOBO,Hobo,8,,,ME17punk.ogg,Male,60
+108,ZOMBIEMAN,Zombie Man,8,,,ME17punk.ogg,Male,32
+109,YA110W,Bot,32,,,,Female,100
+110,YELLOW,Bot,32,34anonbattle.ogg,,,Female,100
+111,BUGMANIAC,Bug Maniac,24,,,ME05youngster.ogg,Female,100
+112,BIV,Anonymous Admin,32,35anonadminbattle.ogg,,ME16anonymous.ogg,Male,100
+113,CLERK_M,Clerk,32,,,ME19richboy.ogg,Male,100
+114,CLERK_F,Clerk,32,,,ME19richboy.ogg,Female,100
+115,WINSTREEK_1,Winstreek,32,,,ME19richboy.ogg,Male,100
+116,WINSTREEK_2,Winstreek,32,,,ME19richboy.ogg,Female,100
+117,WINSTREEK_3,Winstreek,32,,,ME19richboy.ogg,Male,100
+118,WINSTREEK_4,Winstreek,32,,,ME19richboy.ogg,Female,100
+119,LEADER_POISON,Gym Leader,100,08gymbattle.ogg,ME01gymvictory.ogg,,Male,100
+120,DOCTOR,Doctor,32,,,ME19richboy.ogg,Male,100
+121,NURSE,Nurse,32,,,ME19richboy.ogg,Male,100
+122,PARASOLLADY,Parasol Lady,32,,,ME09lass.ogg,Female,100
+123,BAKER,Baker,32,,,ME09lass.ogg,Female,100
+124,PUNK_F,Punk Girl,32,,,ME17punk.ogg,Female,60

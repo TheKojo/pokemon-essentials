@@ -1,6 +1,4 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
-1,STENCH,Stench,"The stench may cause the target to flinch."
+﻿1,STENCH,Stench,"The stench may cause the target to flinch."
 2,DRIZZLE,Drizzle,"The Pokémon makes it rain if it appears in battle."
 3,SPEEDBOOST,Speed Boost,"Its Speed stat is gradually boosted."
 4,BATTLEARMOR,Battle Armor,"The Pokémon is protected against critical hits."
@@ -233,3 +231,15 @@
 231,SHADOWSHIELD,Shadow Shield,"Resists damage while its HP is full."
 232,PRISMARMOR,Prism Armor,"Reduces damage from super-effective attacks."
 233,NEUROFORCE,Neuroforce,"Powers up moves that are super-effective."
+
+500,WEATHERREPORT,Weather Report,"Weather changes randomly."
+501,EVASIONBOOST,Evasion Boost,"Boosts evasiveness every turn at the cost of HP."
+502,STEAM,Steam,"Raises evasiveness if hit by Water-type moves, rather than taking damage."
+503,DAYAURA,Day Aura,"Powers up certain types."
+504,NIGHTAURA,Night Aura,"Powers up certain types."
+505,BLOODSUCKER,Bloodsucker,"Recovers more from HP-stealing moves."
+506,BULLCHARGE,Bull Charge,"Increases power of next attack if damaged during the turn."
+507,THORNY,Thorny,"Inflicts damage to the Pokémon on contact."
+508,SOILSTUCK,Soilstuck,"For one turn, powers up Ground-type moves, but user can't escape."
+509,TWINATTACK,Twin Attack,"Each move is weaker, but hits twice."
+510,COMEBACK,Comeback,"Returns to the party after using a move that makes contact."

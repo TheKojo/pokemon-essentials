@@ -1,6 +1,4 @@
-﻿# See the documentation on the wiki to learn how to edit this file.
-#-------------------------------
-1,MEGAHORN,Megahorn,000,120,BUG,Physical,85,10,0,NearOther,0,abef,"Using its tough and impressive horn, the user rams into the target with no letup."
+﻿1,MEGAHORN,Megahorn,000,120,BUG,Physical,85,10,0,NearOther,0,abef,"Using its tough and impressive horn, the user rams into the target with no letup."
 2,ATTACKORDER,Attack Order,000,90,BUG,Physical,100,15,0,NearOther,0,befh,"The user calls out its underlings to pummel the target. Critical hits land more easily."
 3,BUGBUZZ,Bug Buzz,046,90,BUG,Special,100,10,10,NearOther,0,befk,"The user vibrates its wings to generate a damaging sound wave. It may also lower the target's Sp. Def stat."
 4,FIRSTIMPRESSION,First Impression,174,90,BUG,Physical,100,10,0,NearOther,2,abef,"Although this move has great power, it only works the first turn the user is in battle."
@@ -693,3 +691,15 @@
 674,SOAK,Soak,061,0,WATER,Status,100,20,0,NearOther,0,bce,"The user shoots a torrent of water at the target and changes the target's type to Water."
 675,WATERSPORT,Water Sport,09E,0,WATER,Status,0,15,0,BothSides,0,,"The user soaks itself with water. The move weakens Fire-type moves while the user is in the battle."
 676,WITHDRAW,Withdraw,01D,0,WATER,Status,0,40,0,User,0,d,"The user withdraws its body into its hard shell, raising its Defense stat."
+800,COCONUTDROP,Coconut Drop,164,1,GRASS,Physical,90,20,20,NearOther,0,abef,"The user jumps and drops on the target. It may also confuse the target."
+801,FISTICUFF,Fisticuff,0CF,60,STEEL,Physical,100,15,100,NearOther,0,abef,"The user hardens its hands and uses them to grapple the target. The target cannot switch for four to five turns."
+802,MINDCONTROL,Mind Control,121,85,PSYCHIC,Physical,100,15,0,NearOther,0,bef,"The user telepathically forces the target to attack itself. It does more damage the higher the target's Attack stat."
+803,SHEEPCOUNT,Sheep Count,003,0,NORMAL,Status,100,15,0,NearOther,0,bce,"The user hypnotises the target into falling asleep."
+804,DREAMTIME,Dreamtime,163,0,PSYCHIC,Status,0,10,100,User,0,di,"The user enters a dreamy state for two turns. By doing this, it raises each of its stats."
+805,ROCKYTERRAIN,Rocky Terrain,165,0,ROCK,Status,0,10,0,BothSides,0,,"The user spreads sharp rocks over the field to last five turns. This slows down and damages Pokémon on the ground a little every turn."
+806,THORNS,Thorns,01C,50,GRASS,Physical,100,20,100,NearOther,0,abdefj,"The user pierces the target with sharpened thorns. Hitting a target raises the Attack stat."
+807,CHAMPROLL,Champ Roll,00F,70,FIGHTING,Physical,100,25,30,NearOther,0,abei,"The user spins the target while biting viciously. It may make the target flinch."
+808,JUNKTOSS,Junk Toss,06F,1,POISON,Physical,100,15,0,NearOther,0,bef,"The target is attacked with random garbage. The power varies."
+809,CONTAGIONDRAIN,Contagion Drain,166,70,POISON,Physical,100,10,0,NearOther,0,abefj,"Absorbs energy from the opponent with a contagious appendage. Poisons the opponent if the user is a Poison-type."
+810,FREEZEBLADE,Freeze Blade,00C,75,ICE,Physical,100,20,10,NearOther,0,abefh,"Slashes the target with a freezing blade. Critical hits land more easily."
+811,HONEYSHOT,Honey Shot,044,60,BUG,Special,95,15,100,NearOther,0,bef,"Forcefully spits a sticky fluid at the target. It sharply lowers the target's Speed by hindering its movement."
