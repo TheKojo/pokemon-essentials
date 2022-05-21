@@ -85,20 +85,32 @@ end
 class PokemonIconSprite < SpriteWrapper
   attr_accessor :selected
   attr_accessor :active
+  attr_accessor :animating
   attr_reader   :pokemon
 
   def initialize(pokemon,viewport=nil)
     super(viewport)
+    @animBitmap=nil
+    @frames=[
+       Rect.new(0,0,64,64),
+       Rect.new(64,0,64,64),#Rect.new(64,0,64,64) CHANGED
+       Rect.new(128,0,64,64),
+       Rect.new(192,0,64,64)
+    ]
     @selected     = false
+    @animframe=0
     @active       = false
     @numFrames    = 0
     @currentFrame = 0
     @counter      = 0
     self.pokemon  = pokemon
+    @pokemon=pokemon
     @logical_x    = 0   # Actual x coordinate
     @logical_y    = 0   # Actual y coordinate
+    @animating=true
     @adjusted_x   = 0   # Offset due to "jumping" animation in party screen
     @adjusted_y   = 0   # Offset due to "jumping" animation in party screen
+    
   end
 
   def dispose
@@ -119,6 +131,48 @@ class PokemonIconSprite < SpriteWrapper
     super(@logical_y+@adjusted_y)
   end
 
+  def update
+    @updating=true
+    super
+    if @animBitmap
+      @animBitmap.update
+      self.bitmap=@animBitmap.bitmap 
+      self.src_rect=@frames[@animframe]
+    end
+    self.color=Color.new(0,0,0,0)
+    frameskip=8
+    frameskip=16 if @pokemon && @pokemon.hp<=(@pokemon.totalhp/2)
+    frameskip=32 if @pokemon && @pokemon.hp<=(@pokemon.totalhp/4)
+    frameskip=-1 if @pokemon && (@pokemon.hp==0 || @animating == false)
+    if frameskip==-1
+      @animframe=0
+      self.src_rect=@frames[@animframe]
+    else
+      @frame+=1
+      @frame=0 if @frame>100
+      if @frame % frameskip == 0#@frame>=frameskip && (@frame % 8 == 0)
+        #(@animframe==1) ? 0 : 1
+        #Kernel.echo(@animframe)
+        self.src_rect=@frames[@animframe]
+        #@frame=0
+        @animframe += 1
+        if @animframe == 4
+          @animframe = 0
+        end
+      end
+    end
+    #if self.selected
+      #@adjusted_x=0#4
+      #@adjusted_y=0#(@animframe==0) ? -2 : 6
+    #else
+      #@adjusted_x=0
+      #@adjusted_y=0
+    #end
+    @updating=false
+    self.x=self.x
+    self.y=self.y
+  end
+  
   def pokemon=(value)
     @pokemon = value
     @animBitmap.dispose if @animBitmap
@@ -130,9 +184,27 @@ class PokemonIconSprite < SpriteWrapper
       return
     end
     @animBitmap = AnimatedBitmap.new(GameData::Species.icon_filename_from_pokemon(value))
+    @w = @animBitmap.bitmap.width
+    @frames = [
+        Rect.new(0,0,@w/4,@w/4),
+        Rect.new(@w/4,0,@w/4,@w/4),
+        Rect.new(@w/2,0,@w/4,@w/4),
+        Rect.new(@w*3/4,0,@w/4,@w/4)
+    ]
+    if @w/4 == 40*2
+    	@adjusted_x = -12
+        @adjusted_y = -4
+    elsif @w/4 == 44*2
+        @adjusted_x = -12
+        @adjusted_y = -4
+    elsif @w/4 == 64*2
+        @adjusted_x = -36
+    	@adjusted_y = -56
+    end
     self.bitmap = @animBitmap.bitmap
-    self.src_rect.width  = @animBitmap.height
-    self.src_rect.height = @animBitmap.height
+    self.src_rect=@frames[@animframe]
+    #self.src_rect.width  = @animBitmap.height
+    #self.src_rect.height = @animBitmap.height
     @numFrames    = @animBitmap.width/@animBitmap.height
     @currentFrame = 0 if @currentFrame>=@numFrames
     changeOrigin
@@ -216,13 +288,30 @@ end
 # Pokémon icon (for species)
 #===============================================================================
 class PokemonSpeciesIconSprite < SpriteWrapper
+  attr_accessor :selected
+  attr_accessor :active
   attr_reader :species
   attr_reader :gender
   attr_reader :form
+  attr_reader :x
+  attr_reader :y
   attr_reader :shiny
 
   def initialize(species,viewport=nil)
     super(viewport)
+    @animBitmap=nil
+    @frames=[
+       Rect.new(0,0,64,64),
+       Rect.new(64,0,64,64),#Rect.new(64,0,64,64) CHANGED
+       Rect.new(128,0,64,64),
+       Rect.new(192,0,64,64)
+    ]
+    @animframe=0
+    @frame=0
+    @x=0
+    @y=0
+    @adjusted_x=0
+    @adjusted_y=0
     @species      = species
     @gender       = 0
     @form         = 0
@@ -307,28 +396,70 @@ class PokemonSpeciesIconSprite < SpriteWrapper
   def refresh
     @animBitmap.dispose if @animBitmap
     @animBitmap = nil
-    bitmapFileName = GameData::Species.icon_filename(@species, @form, @gender, @shiny)
+    bitmapFileName = GameData::Species.icon_filename_kojo(@species, @form, @gender, @shiny)
     return if !bitmapFileName
     @animBitmap = AnimatedBitmap.new(bitmapFileName)
-    self.bitmap = @animBitmap.bitmap
-    self.src_rect.width  = @animBitmap.height
-    self.src_rect.height = @animBitmap.height
-    @numFrames = @animBitmap.width / @animBitmap.height
-    @currentFrame = 0 if @currentFrame>=@numFrames
-    changeOrigin
+    ###
+    @w = @animBitmap.bitmap.width
+    @frames = [
+      Rect.new(0,0,@w/4,@w/4),
+      Rect.new(@w/4,0,@w/4,@w/4),
+      Rect.new(@w/2,0,@w/4,@w/4),
+      Rect.new(@w*3/4,0,@w/4,@w/4)
+    ]
+    if @w/4 == 40*2
+      @adjusted_x = -12
+      @adjusted_y = -4
+    elsif @w/4 == 44*2
+      @adjusted_x = -12
+      @adjusted_y = -4
+    elsif @w/4 == 64*2
+      @adjusted_x = -36
+      @adjusted_y = -56
+    end
+    ###
+    self.bitmap=@animBitmap.bitmap
+    self.src_rect=@frames[@animframe]
+
+    #self.src_rect.width  = @animBitmap.height
+    #self.src_rect.height = @animBitmap.height
+    #@numFrames = @animBitmap.width / @animBitmap.height
+    #@currentFrame = 0 if @currentFrame>=@numFrames
+    #changeOrigin
   end
 
   def update
     return if !@animBitmap
+    @updating=true
     super
     @animBitmap.update
     self.bitmap = @animBitmap.bitmap
+    self.src_rect=@frames[@animframe]
     # Update animation
-    @counter += 1
-    if @counter>=self.counterLimit
-      @currentFrame = (@currentFrame+1)%@numFrames
-      @counter = 0
+    #frameskip=5
+    #@frame+=1
+    #@frame=0 if @frame>10
+    #if @frame>=frameskip
+      #@animframe=(@animframe==1) ? 0 : 1
+      #self.src_rect=@frames[@animframe]
+      #@frame=0
+    #end
+    frameskip=8
+    @frame+=1
+    @frame=0 if @frame>100
+    if @frame % frameskip == 0#@frame>=frameskip && (@frame % 8 == 0)
+      #(@animframe==1) ? 0 : 1
+      #Kernel.echo(@animframe)
+      self.src_rect=@frames[@animframe]
+      #@frame=0
+      @animframe += 1
+      if @animframe == 4
+        @animframe = 0
+      end
     end
-    self.src_rect.x = self.src_rect.width*@currentFrame
+    @updating=false
+    self.x=self.x
+    self.y=self.y
+
   end
 end

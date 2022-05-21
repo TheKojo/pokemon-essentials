@@ -6,8 +6,8 @@ class PokemonLoadPanel < SpriteWrapper
 
   TEXTCOLOR             = Color.new(232,232,232)
   TEXTSHADOWCOLOR       = Color.new(136,136,136)
-  MALETEXTCOLOR         = Color.new(56,160,248)
-  MALETEXTSHADOWCOLOR   = Color.new(56,104,168)
+  MALETEXTCOLOR         = Color.new(26,233,255)
+  MALETEXTSHADOWCOLOR   = Color.new(26,112,255)
   FEMALETEXTCOLOR       = Color.new(240,72,88)
   FEMALETEXTSHADOWCOLOR = Color.new(160,64,64)
 
@@ -108,10 +108,10 @@ class PokemonLoad_Scene
     for i in 0...commands.length
       @sprites["panel#{i}"] = PokemonLoadPanel.new(i,commands[i],
          (show_continue) ? (i==0) : false,trainer,frame_count,map_id,@viewport)
-      @sprites["panel#{i}"].x = 24*2
+      @sprites["panel#{i}"].x = 81*2
       @sprites["panel#{i}"].y = y
       @sprites["panel#{i}"].pbRefresh
-      y += (show_continue && i==0) ? 112*2 : 24*2
+      y += (show_continue && i==0) ? 111*2+1*2 : 23*2+1*2
     end
     @sprites["cmdwindow"] = Window_CommandPokemon.new([])
     @sprites["cmdwindow"].viewport = @viewport
@@ -169,15 +169,14 @@ class PokemonLoad_Scene
       @sprites["player"] = TrainerWalkingCharSprite.new(filename,@viewport)
       charwidth  = @sprites["player"].bitmap.width
       charheight = @sprites["player"].bitmap.height
-      @sprites["player"].x        = 56*2-charwidth/8
+      @sprites["player"].x        = 113*2-charwidth/8
       @sprites["player"].y        = 56*2-charheight/8
       @sprites["player"].src_rect = Rect.new(0,0,charwidth/4,charheight/4)
     end
     for i in 0...trainer.party.length
       @sprites["party#{i}"] = PokemonIconSprite.new(trainer.party[i],@viewport)
-      @sprites["party#{i}"].setOffset(PictureOrigin::Center)
-      @sprites["party#{i}"].x = (167+33*(i%2))*2
-      @sprites["party#{i}"].y = (56+25*(i/2))*2
+      @sprites["party#{i}"].x = 208*2+33*2*(i&1)
+      @sprites["party#{i}"].y = 36*2+25*2*(i/2)
       @sprites["party#{i}"].z = 99999
     end
   end
