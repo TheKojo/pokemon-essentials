@@ -114,11 +114,14 @@ end
 
 
 def pbDayNightTint(object)
+  noShadeMaps = [80,114,182,184,188]
   return if !$scene.is_a?(Scene_Map)
   if Settings::TIME_SHADING && GameData::MapMetadata.exists?($game_map.map_id) &&
      GameData::MapMetadata.get($game_map.map_id).outdoor_map
-    tone = PBDayNight.getTone
-    object.tone.set(tone.red,tone.green,tone.blue,tone.gray)
+	 if !noShadeMaps.include?($game_map.map_id) #ADDED 2018-12-16
+		tone = PBDayNight.getTone
+		object.tone.set(tone.red,tone.green,tone.blue,tone.gray)
+	 end
   else
     object.tone.set(0,0,0,0)
   end
