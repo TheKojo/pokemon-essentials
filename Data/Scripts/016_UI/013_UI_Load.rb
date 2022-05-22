@@ -11,7 +11,7 @@ class PokemonLoadPanel < SpriteWrapper
   FEMALETEXTCOLOR       = Color.new(240,72,88)
   FEMALETEXTSHADOWCOLOR = Color.new(160,64,64)
 
-  def initialize(index,title,isContinue,trainer,framecount,mapid,viewport=nil)
+  def initialize(index, title, isContinue, trainer, framecount, stats, mapid, viewport = nil)
     super(viewport)
     @index = index
     @title = title

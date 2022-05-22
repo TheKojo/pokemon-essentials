@@ -964,7 +964,7 @@ module Compiler
       end
       list[index, 0] = new_events if new_events.length > 0
       changed = true
-    elsif script[/^\s*pbTrainerBattle\((.+)\)\s*$/]
+    elsif script[/^\s*pbTrainerBattle\((.+)\)\s*$/] && false
       battle_params = $1.split(",")
       trainer1 = "#{battle_params[0].strip}, #{battle_params[1].strip}"
       trainer1 += ", #{battle_params[4].strip}" if battle_params[4] && battle_params[4].strip != "nil"
@@ -972,6 +972,7 @@ module Compiler
       old_indent = list[index].indent
       new_events = []
       if battle_params[2] && !battle_params[2].strip.empty? && battle_params[2].strip != "nil"
+	    Console.echo_li _INTL("\nKOJO {1} --- {2}\n",battle_params[1],battle_params[2])
         speech = battle_params[2].gsub(/^\s*_I\(\s*"\s*/, "")
         speech.gsub!(/\"\s*\)\s*$/, "").strip
         push_comment(new_events, "EndSpeech: #{speech}", old_indent)
@@ -987,7 +988,7 @@ module Compiler
       end
       list[index, 0] = new_events if new_events.length > 0
       changed = true
-    elsif script[/^\s*pbDoubleTrainerBattle\((.+)\)\s*$/]
+    elsif script[/^\s*pbDoubleTrainerBattle\((.+)\)\s*$/] && false
       battle_params = $1.split(",")
       trainer1 = "#{battle_params[0].strip}, #{battle_params[1].strip}"
       trainer1 += ", #{battle_params[2].strip}" if battle_params[2] && battle_params[2].strip != "nil"
