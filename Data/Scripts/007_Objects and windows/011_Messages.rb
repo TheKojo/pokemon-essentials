@@ -387,6 +387,9 @@ def pbCreateStatusWindow(viewport = nil)
 end
 
 def pbCreateMessageWindow(viewport = nil, skin = nil)
+	if $Bubble != 0
+		pbSetBubbleArrow(viewport, skin)
+	end
   msgwindow = Window_AdvancedTextPokemon.new("")
   if viewport
     msgwindow.viewport = viewport
@@ -406,6 +409,7 @@ end
 def pbDisposeMessageWindow(msgwindow)
   $game_temp.message_window_showing = false if $game_temp
   msgwindow.dispose
+  pbDisposeBubbleArrow
 end
 
 

@@ -3,6 +3,11 @@ module MessageConfig
   LIGHT_TEXT_SHADOW_COLOR = Color.new(72, 80, 88)
   DARK_TEXT_MAIN_COLOR    = Color.new(80, 80, 88)
   DARK_TEXT_SHADOW_COLOR  = Color.new(160, 160, 168)
+  BUBBLE_TEXT_MAIN_COLOR        = Color.new(22,22,22)
+  BUBBLE_TEXT_SHADOW_COLOR      = Color.new(166,160,151) #194, 187, 176
+  BUBBLE_TEXT_SHADOW_YELLOW     = Color.new(229,151,126)
+  DARK_BUBBLE_TEXT_MAIN_COLOR   = Color.new(248,248,248)
+  DARK_BUBBLE_TEXT_SHADOW_COLOR = Color.new(72,80,88)
   FONT_NAME               = "Power Green"
   FONT_SIZE               = 27
   FONT_Y_OFFSET           = 8
@@ -244,6 +249,7 @@ def pbRepositionMessageWindow(msgwindow, linecount = 2)
       msgwindow.y = (Graphics.height / 2) - (msgwindow.height / 2)
     when 2
       msgwindow.y = (Graphics.height) - (msgwindow.height)
+	  pbSetBubble(msgwindow, linecount)
     end
     msgwindow.opacity = 0 if $game_system.message_frame != 0
   end
@@ -345,8 +351,24 @@ def getSkinColor(windowskin, color, isDarkSkin)
       colorToRgb32(MessageConfig::DARK_TEXT_MAIN_COLOR),
       colorToRgb32(MessageConfig::DARK_TEXT_SHADOW_COLOR),   # 11 Dark default
       colorToRgb32(MessageConfig::LIGHT_TEXT_MAIN_COLOR),
-      colorToRgb32(MessageConfig::LIGHT_TEXT_SHADOW_COLOR)   # 12 Light default
+      colorToRgb32(MessageConfig::LIGHT_TEXT_SHADOW_COLOR),  # 12 Light default
+	  colorToRgb32(MessageConfig::BUBBLE_TEXT_MAIN_COLOR),
+      colorToRgb32(MessageConfig::BUBBLE_TEXT_SHADOW_COLOR),  # 13 Bubble default
+	  colorToRgb32(MessageConfig::DARK_BUBBLE_TEXT_MAIN_COLOR),
+      colorToRgb32(MessageConfig::DARK_BUBBLE_TEXT_SHADOW_COLOR),  # 14 Dark Bubble default
+	  colorToRgb32(MessageConfig::BUBBLE_TEXT_SHADOW_COLOR),  
+	  colorToRgb32(MessageConfig::BUBBLE_TEXT_SHADOW_YELLOW)# 15 Yellow bubble
     ]
+	if $Bubble==1 || $Bubble==2 || $Bubble==5
+		color = 13
+		isDarkSkin = false
+	elsif $Bubble == 3
+		color = 15
+		isDarkSkin = false
+	elsif $Bubble == 4
+		color = 14
+		isDarkSkin = false
+	end
     if color == 0 || color > textcolors.length / 2   # No special colour, use default
       if isDarkSkin   # Dark background, light text
         return shadowc3tag(MessageConfig::LIGHT_TEXT_MAIN_COLOR, MessageConfig::LIGHT_TEXT_SHADOW_COLOR)
