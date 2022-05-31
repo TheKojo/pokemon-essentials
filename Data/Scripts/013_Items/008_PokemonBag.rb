@@ -24,7 +24,9 @@ class PokemonBag
       @last_pocket_selections[i] = 0
     end
     @registered_items     = []
+    @registeredItems = []
     @ready_menu_selection = [0, 0, 1]   # Used by the Ready Menu to remember cursor positions
+    @registeredIndex = [0, 0, 1]
   end
 
   def clear
@@ -158,6 +160,11 @@ class PokemonBag
     item_data = GameData::Item.try_get(item)
     @registered_items.delete(item_data.id) if item_data
   end
+  
+  def registeredItems
+    @registeredItems = [] if !@registeredItems
+    return @registeredItems
+  end
 
   #=============================================================================
 
@@ -188,6 +195,10 @@ class PokemonBag
       pocket.sort! { |a, b| GameData::Item.keys.index(a[0]) <=> GameData::Item.keys.index(b[0]) }
     end
     @pockets = new_pockets
+  end
+  def registeredIndex
+    @registeredIndex = [0, 0, 1] if !@registeredIndex
+    return @registeredIndex
   end
 end
 
