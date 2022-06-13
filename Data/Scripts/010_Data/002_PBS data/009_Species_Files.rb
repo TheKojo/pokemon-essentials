@@ -41,11 +41,13 @@ module GameData
       try_gender  = (gender == 1) ? "f" : ""
       try_shadow  = (shadow) ? "_shadow" : ""
 	  try_shiny = (shiny) ? "s" : ""
+	  try_suffix = ((form > 0) || (gender == 1) || (shiny)) ? "_" : ""
       factors = []
-      factors.push([4, try_shiny, ""]) if shiny
-      factors.push([3, try_shadow, ""]) if shadow
-      factors.push([2, try_gender, ""]) if gender == 1
-      factors.push([1, try_form, ""]) if form > 0
+      factors.push([5, try_shiny, ""]) if shiny
+      factors.push([4, try_shadow, ""]) if shadow
+      factors.push([3, try_gender, ""]) if gender == 1
+      factors.push([2, try_form, ""]) if form > 0
+	  factors.push([1, try_suffix, ""]) if ((form > 0) || (gender == 1) || (shiny))
       factors.push([0, try_species, "000"])
       # Go through each combination of parameters in turn to find an existing sprite
       for i in 0...2 ** factors.length
@@ -54,16 +56,17 @@ module GameData
           value = ((i / (2 ** index)) % 2 == 0) ? factor[1] : factor[2]
           case factor[0]
           when 0 then try_species   = value
-          when 1 then try_form      = value
-          when 2 then try_gender    = value
-          when 3 then try_shadow    = value
-          when 4 then try_subfolder = value   # Shininess
+		  when 1 then try_suffix    = value
+          when 2 then try_form      = value
+          when 3 then try_gender    = value
+          when 4 then try_shadow    = value
+          when 5 then try_subfolder = value   # Shininess
           end
         end
         # Look for a graphic matching this combination's parameters
         try_species_text = try_species
-        ret = pbResolveBitmap(sprintf("%s%s%s%s%s%s", path, try_subfolder,
-           try_species_text, try_form, try_gender, try_shadow))
+        ret = pbResolveBitmap(sprintf("%s%sOW_%s%s%s%s%s", path, try_subfolder,
+           try_species_text, try_suffix, try_form, try_gender, try_shadow))
         return ret if ret
       end
       return nil
@@ -157,6 +160,10 @@ module GameData
 
     def self.icon_filename_from_pokemon(pkmn)
       return self.icon_filename(pkmn.species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?, pkmn.egg?)
+    end
+	
+	 def self.icon_filename_from_pokemon_kojo(pkmn)
+      return self.icon_filename_kojo(pkmn.species, pkmn.form, pkmn.gender, pkmn.shiny?, pkmn.shadowPokemon?, pkmn.egg?)
     end
 
     def self.egg_icon_bitmap(species, form)
