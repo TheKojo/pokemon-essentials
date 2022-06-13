@@ -985,7 +985,7 @@ module Compiler
       end
       list[index, 0] = new_events if new_events.length > 0
       changed = true
-    elsif script[/^\s*pbTrainerBattle\((.+)\)\s*$/] && false
+    elsif script[/^\s*pbTrainerBattle\((.+)\)\s*$/]
       echoln ""
       echoln $1
       battle_params = split_string_with_quotes($1)   # Split on commas
