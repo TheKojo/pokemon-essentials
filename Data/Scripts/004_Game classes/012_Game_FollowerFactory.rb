@@ -327,6 +327,7 @@ class FollowerSprites
     @sprites.each { |sprite| sprite.dispose }
     @sprites.clear
     $game_temp.followers.each_follower do |event, follower|
+	  echoln "each follower: "+event.to_s+", "+follower.to_s
       @sprites.push(Sprite_Character.new(@viewport, event))
     end
   end

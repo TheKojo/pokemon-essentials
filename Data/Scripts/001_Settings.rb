@@ -44,7 +44,7 @@ module Settings
   #=============================================================================
 
   # Whether outdoor maps should be shaded according to the time of day.
-  TIME_SHADING                               = true
+  TIME_SHADING                               = false
   # Whether poisoned Pokémon will lose HP while walking around in the field.
   POISON_IN_FIELD                            = true
   # Whether poisoned Pokémon will faint while walking around in the field

@@ -115,6 +115,10 @@ class BitmapWrapper < Bitmap
   end
 
   def initialize(*arg)
+     (0...arg.length).each do |i|
+      #echoln "init bitmap: "+ arg[i].to_s
+    end
+	
     super
     @refcount = 1
   end
