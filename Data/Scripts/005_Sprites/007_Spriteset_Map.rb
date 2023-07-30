@@ -1,4 +1,6 @@
-# Unused
+#===============================================================================
+# Unused.
+#===============================================================================
 class ClippableSprite < Sprite_Character
   def initialize(viewport, event, tilemap)
     @tilemap = tilemap
@@ -29,8 +31,9 @@ class ClippableSprite < Sprite_Character
   end
 end
 
-
-
+#===============================================================================
+#
+#===============================================================================
 class Spriteset_Map
   attr_reader :map
 
@@ -41,7 +44,8 @@ class Spriteset_Map
   @@viewport3 = Viewport.new(0, 0, Settings::SCREEN_WIDTH, Settings::SCREEN_HEIGHT)   # Flashing
   @@viewport3.z = 500
 
-  def self.viewport   # For access by Spriteset_Global
+  # For access by Spriteset_Global.
+  def self.viewport
     return @@viewport1
   end
 
