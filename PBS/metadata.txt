@@ -18,7 +18,9 @@ WalkCharset = trchar000
 RunCharset = trrun000
 CycleCharset = boy_bike
 SurfCharset = boy_surf
+DiveCharset = boy_surf
 FishCharset = boy_fish_offset
+SurfFishCharset = boy_fish_offset
 #-------------------------------
 [2]
 TrainerType = POKEMONTRAINER_Leaf
@@ -26,4 +28,6 @@ WalkCharset = trchar001
 RunCharset = trrun001
 CycleCharset = girl_bike
 SurfCharset = girl_surf
+DiveCharset = girl_surf
 FishCharset = girl_fish_offset
+SurfFishCharset = girl_fish_offset
