@@ -80,113 +80,210 @@ class Sprite_Character < RPG::Sprite
   end
 
   def buildTrainerSpriteSheets
-	@customization_loc = "Graphics/Characters/Customization/"
+    useFemale = $player.female?
+    useFemale = true
+	  @customization_loc = "Graphics/Characters/Customization/"
+    @ride_loc = "Graphics/Characters/"
   	@skin_name = "LIGHT"
-	@hair_name = "EXPLORER"
-	@hair_color_name = "BLONDE"
-	@eye_name = "RED"
-	@hat_name = "DESERTCAP"
-	@shirt_name = "TRAINER"
-	@glove_name = "TRAINER"
-	@pants_name = "CARGO"
-	@shoe_name = "BOOTS"
-	@bag_name = "BASIC"
-	@gender = $player.female? ? "Female/" : "Male/"
-	@suffix = ""
-	@walk_sheet = assembleTrainer
-	@suffix = "run"
-	@run_sheet = assembleTrainer
-	echoln "Assembling trainer sprite..."
-  end
-  
-  def assembleTrainer
-	#Base Skin
-	skin_bitmap = AnimatedBitmap.new(@customization_loc+@gender+"Skin/skin_"+@skin_name+@suffix, @character.character_hue)
-	
-	#Right Leg
-	legr_bitmap = AnimatedBitmap.new(@customization_loc+@gender+"Skin/legr_"+@skin_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,legr_bitmap)
-	
-	#Left Leg
-	legl_bitmap = AnimatedBitmap.new(@customization_loc+@gender+"Skin/legl_"+@skin_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,legl_bitmap)
-	
-	#Shoes
-	shoer_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Shoes/shoer_" +@shoe_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,shoer_bitmap)
-	shoel_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Shoes/shoel_" +@shoe_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,shoel_bitmap)
-	
-	#Pants
-	pantsr_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Pants/pantsr_" +@pants_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,pantsr_bitmap)
-	pantsl_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Pants/pantsl_" +@pants_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,pantsl_bitmap)
-	
-	#Shirt
-	shirt_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirt_" +@shirt_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,shirt_bitmap)
-	
-	#Left Arm
-	arml_bitmap = AnimatedBitmap.new(@customization_loc+@gender+"Skin/arml_"+@skin_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,arml_bitmap)
-	
-	#Bag
-	bag_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Bag/bag_" +@bag_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,bag_bitmap)
-	
-	#Right Arm
-	armr_bitmap = AnimatedBitmap.new(@customization_loc+@gender+"Skin/armr_"+@skin_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,armr_bitmap)
-	
-	#Sleeves
-	shirtr_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirtr_" +@shirt_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,shirtr_bitmap)
-	shirtl_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirtl_" +@shirt_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,shirtl_bitmap)
-	
-	#Right Glove
-	glover_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Gloves/glover_" +@glove_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,glover_bitmap)
-	
-	#Left Glove
-	glovel_bitmap  = AnimatedBitmap.new(@customization_loc+@gender+"Gloves/glovel_" +@glove_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,glovel_bitmap)
-	
-	#Eye
-	eye_bitmap  = AnimatedBitmap.new(@customization_loc+"Unisex/Eyes/eye_" +@eye_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,eye_bitmap)
-	
-	#Hair
-	hair_bitmap = AnimatedBitmap.new(@customization_loc+"Unisex/Hair/hair_"+@hair_name+"_"+@hair_color_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,hair_bitmap)
-	
-	#Hat
-	hats_bitmap  = AnimatedBitmap.new(@customization_loc+"Unisex/Hat/hats_" +@hat_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,hats_bitmap,10)
-	hat_bitmap  = AnimatedBitmap.new(@customization_loc+"Unisex/Hat/hat_" +@hat_name+@suffix, @character.character_hue)
-	assemble(skin_bitmap,hat_bitmap)
+    @hair_name = useFemale ? "PONYTAIL": "EXPLORER"
+    @hair_color_name = "BLONDE"
+    @eye_name = useFemale ? "GREEN": "RED"
+    @hat_name = useFemale ? "SUNHAT": "DESERTCAP"
+    @shirt_name = "TRAINER"
+    @glove_name = "TRAINER"
+    @pants_name = "CARGO"
+    @shoe_name = "BOOTS"
+    @bag_name = "BASIC"
+    @gender = useFemale ? "Female/" : "Male/"
 
-	
+    @ride_name = "OW_DOONGO"
+    $PokemonGlobal.riding = true
+    #$game_player.set_movement_type(:riding)
 
-	return skin_bitmap
-  end
-  
-  #def assembleSkin
+    @customization_bitmaps = {}
+    #Initialize spritesheets for each part of the player
+    for i in 0..1
+      suffix = i == 1 ? "_run" : ""
+      #Body Parts - Hair is optional
+      #----------------------------------------
+      #Torso,Head
+      @customization_bitmaps["skin#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Skin/skin_"+@skin_name+suffix, @character.character_hue)
+      #Arms
+      @customization_bitmaps["armr#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Skin/armr_"+@skin_name+suffix, @character.character_hue)
+      @customization_bitmaps["arml#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Skin/arml_"+@skin_name+suffix, @character.character_hue)
+      #Legs
+      @customization_bitmaps["legr#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Skin/legr_"+@skin_name+suffix, @character.character_hue)
+      @customization_bitmaps["legl#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Skin/legl_"+@skin_name+suffix, @character.character_hue)
+      #Hair
+      @customization_bitmaps["hair#{suffix}"] = AnimatedBitmap.new(@customization_loc+"Unisex/Hair/hair_"+@hair_name+"_"+@hair_color_name+suffix, @character.character_hue)
+      #Eyes
+      @customization_bitmaps["eye#{suffix}"]  = AnimatedBitmap.new(@customization_loc+"Unisex/Eyes/eye_" +@eye_name+suffix, @character.character_hue)
 
-  #end
-  
-  def assemble(base, piece,opacity=255)
-	base.bitmap.blt(0,0,piece.bitmap,Rect.new(0,0,piece.width,piece.height),opacity)
+      #Clothing Parts - Shirt, Pants, Shoes, and Gloves are optional
+      #----------------------------------------
+      #Hat
+      @customization_bitmaps["hat#{suffix}"]  = AnimatedBitmap.new(@customization_loc+"Unisex/Hat/hat_" +@hat_name+suffix, @character.character_hue)
+      @customization_bitmaps["hats#{suffix}"] = AnimatedBitmap.new(@customization_loc+"Unisex/Hat/hats_" +@hat_name+suffix, @character.character_hue)
+      #Shirt
+      @customization_bitmaps["shirt#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirt_" +@shirt_name+suffix, @character.character_hue)
+      @customization_bitmaps["shirtr#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirtr_" +@shirt_name+suffix, @character.character_hue)
+      @customization_bitmaps["shirtl#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirtl_" +@shirt_name+suffix, @character.character_hue)
+      #Pants
+      @customization_bitmaps["pantsr#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Pants/pantsr_" +@pants_name+suffix, @character.character_hue)
+      @customization_bitmaps["pantsl#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Pants/pantsl_" +@pants_name+suffix, @character.character_hue)
+      #Shoes
+      @customization_bitmaps["shoer#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shoes/shoer_" +@shoe_name+suffix, @character.character_hue)
+      @customization_bitmaps["shoel#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shoes/shoel_" +@shoe_name+suffix, @character.character_hue)
+      #Gloves
+      @customization_bitmaps["glover#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Gloves/glover_" +@glove_name+suffix, @character.character_hue)
+      @customization_bitmaps["glovel#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Gloves/glovel_" +@glove_name+suffix, @character.character_hue)
+      #Bag
+      @customization_bitmaps["bag#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Bag/bag_" +@bag_name+suffix, @character.character_hue)
+    end
+
+    #Order to layer the parts, from bottom to top
+    @walkrun_layer_order = ["skin","legr","legl","shoer","shoel","pantsr","pantsl","shirt","arml","bag","armr","shirtr","shirtl","glover","glovel","eye","hair","hats","hat"]
+    #@ride_layer_order
+
+    echoln "Assembling trainer sprite..."
+    @walk_sheet = assembleTrainer
+    @run_sheet = assembleTrainer("_run")
+    
   end
   
-  def assembleRight(base, piece)
-	#
-	base.bitmap.blt(0,0,piece.bitmap,Rect.new(0,0,piece.width,piece.height))
+  def assembleTrainer(suffix="")
+    character_bitmap = nil
+    if $PokemonGlobal.riding
+      character_bitmap = assembleRide
+    else
+      character_bitmap = assembleWalkRun(suffix)
+    end
+    return character_bitmap
+  end
+
+
+
+  def assembleWalkRun(suffix)
+    player_bitmap = AnimatedBitmap.new(@customization_loc+"blank"+suffix, @character.character_hue)
+    @walkrun_layer_order.each do |part|
+      assemble(player_bitmap,@customization_bitmaps[part+suffix])
+    end
+    return player_bitmap
+  end
+
+  def assembleRide
+    #Setup
+    player_bitmap = AnimatedBitmap.new(@customization_loc+"blank_ride", @character.character_hue)
+    ride_bitmap = AnimatedBitmap.new(@ride_loc.to_s+@ride_name.to_s, @character.character_hue)
+
+    #Down movement
+    @walkrun_layer_order.each do |part|
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 0, 0, 0, 0, 0, -12*2)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 1, 0, 0, 0, 0, -12*2)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 2, 0, 0, 0, 0, -12*2)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 3, 0, 0, 0, 0, -12*2)
+    end
+
+    assembleSingleRow(player_bitmap, ride_bitmap, 0, 0, 0)
+
+    #Left movement
+    assembleRideLeftRight(player_bitmap, ride_bitmap, 1)
+
+    #Right movement
+    assembleRideLeftRight(player_bitmap, ride_bitmap, 2)
+
+    #Up movement
+    assembleSingleRow(player_bitmap, ride_bitmap, 3, 0, 0)
+
+    @walkrun_layer_order.each do |part|
+      xPos = 0
+      yOffset = -6*2
+      if (isLeg?(part) && !isFarPart?(part)) #Right Leg
+        xPos = 1
+        yOffset -= 2
+      end
+      if (isLeg?(part) && isFarPart?(part)) #Left Leg
+        xPos = 3
+        yOffset -= 2
+      end
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 0, 3, xPos, 3, 0, yOffset)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 1, 3, xPos, 3, 0, yOffset)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 2, 3, xPos, 3, 0, yOffset)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 3, 3, xPos, 3, 0, yOffset)
+    end
+
+    return player_bitmap
+  end
+
+  def assembleRideLeftRight(player_bitmap, ride_bitmap, direction) #1 = left, 2 = right
+    assembleSingleRow(player_bitmap, ride_bitmap, direction, 0, 0)
+    @walkrun_layer_order.each do |part|
+      #Default to picking the part from the first frame of the run animation
+      suffix = "_run"
+      xPos = 0
+      xOffset = 4*2
+      yOffset = -9*2
+      #Don't draw far parts
+      if (isFarPart?(part))
+        next
+      end
+      #Use the arm piece from the walking sheet instead
+      if (isArm?(part))
+        suffix = ""
+        xPos = 1
+        xOffset -= 4
+        yOffset += 2
+      end
+      if (direction == 2)
+        xOffset *= -1
+      end
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 0, direction, xPos, direction, xOffset, yOffset)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 1, direction, xPos, direction, xOffset, yOffset-2)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 2, direction, xPos, direction, xOffset, yOffset)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 3, direction, xPos, direction, xOffset, yOffset-2)
+    end
+  end
+
+
+  def isFarPart?(part)
+    #Left/Right movement frames have these parts in the background of the character and don't need to be drawn for ride animations. These have "l" appended at the end rather than "r"
+    if (part == "arml" || part == "legl" || part == "shirtl" || part == "pantsl" || part == "glovel" || part == "shoel")
+      return true
+    else
+      return false
+    end
+  end
+
+  def isArm?(part)
+    if (part == "armr" || part == "arml" || part == "shirtr" || part == "shirtl" || part == "glover" || part == "glovel" ) 
+      return true
+    else
+      return false
+    end
+  end
+
+  def isLeg?(part)
+    if (part == "legr" || part == "legl" || part == "pantsr"  || part == "pantsl" || part == "shoer" || part == "shoel")
+      return true
+    else
+      return false
+    end
   end
   
-  def assembleLeft(base, piece)
-	base.bitmap.blt(0,0,piece.bitmap,Rect.new(0,0,piece.width,piece.height))
+  
+  def assemble(base, piece, opacity=255)
+	  base.bitmap.blt(0, 0, piece.bitmap, Rect.new(0, 0, piece.width, piece.height), opacity)
+  end
+
+  def assembleSingleFrame(base, piece, baseXPosition, baseYPosition, frameXPosition, frameYPosition, offsetX, offsetY, opacity=255)
+    base.bitmap.blt(base.width/4*baseXPosition+offsetX, base.height/4*baseYPosition+offsetY, piece.bitmap, Rect.new(frameXPosition*piece.width/4, frameYPosition*piece.height/4, piece.width/4, piece.height/4), opacity)
+  end
+
+  def assembleSingleRow(base, piece, yPosition, offsetX, offsetY, opacity=255)
+    assembleSingleFrame(base, piece, 0, yPosition, 0, yPosition, offsetX, offsetY, opacity)
+    assembleSingleFrame(base, piece, 1, yPosition, 1, yPosition, offsetX, offsetY, opacity)
+    assembleSingleFrame(base, piece, 2, yPosition, 2, yPosition, offsetX, offsetY, opacity)
+    assembleSingleFrame(base, piece, 3, yPosition, 3, yPosition, offsetX, offsetY, opacity)
   end
 
   def groundY

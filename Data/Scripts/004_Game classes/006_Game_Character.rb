@@ -138,7 +138,9 @@ class Game_Character
   def pattern_update_speed
     return @jump_time * 2 if jumping?
     ret = @move_time * 2
-    ret *= 2 if @move_speed >= 5   # Cycling speed or faster; slower animation
+    ret *= 1.5 if @move_speed >= 3
+    ret *= 3 if @move_speed >= 5   # Cycling speed or faster; slower animation
+    echoln "move speed is "+@move_speed.to_s
     return ret
   end
 

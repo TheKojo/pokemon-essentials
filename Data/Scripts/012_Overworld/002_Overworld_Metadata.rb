@@ -11,6 +11,9 @@ class PokemonGlobalMetadata
   attr_accessor :descending_waterfall
   attr_accessor :ascending_waterfall
   attr_accessor :fishing
+  ###
+  attr_accessor :riding
+  ###
   # Player data
   attr_accessor :startTime
   attr_accessor :stepcount
@@ -66,6 +69,9 @@ class PokemonGlobalMetadata
     @descending_waterfall = false
     @ascending_waterfall  = false
     @fishing              = false
+    ###
+    @riding               = false
+    ###
     # Player data
     @startTime            = Time.now
     @stepcount            = 0

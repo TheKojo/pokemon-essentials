@@ -353,9 +353,9 @@ module Settings
   #=============================================================================
 
   # The default screen width (at a scale of 1.0).
-  SCREEN_WIDTH  = 448*2#370*2
+  SCREEN_WIDTH  = 480*2#370*2
   # The default screen height (at a scale of 1.0).
-  SCREEN_HEIGHT = 252*2#240*2
+  SCREEN_HEIGHT = 270*2#240*2
   # The default screen scale factor. Possible values are 0.5, 1.0, 1.5 and 2.0.
   SCREEN_SCALE  = 0.5
 
