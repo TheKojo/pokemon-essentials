@@ -355,13 +355,13 @@ def getSkinColor(windowskin, color, isDarkSkin)
       MessageConfig::DARK_TEXT_MAIN_COLOR,
       MessageConfig::DARK_TEXT_SHADOW_COLOR,   # 11 Dark default
       MessageConfig::LIGHT_TEXT_MAIN_COLOR,
-      colorToRgb32(MessageConfig::LIGHT_TEXT_SHADOW_COLOR),  # 12 Light default
-	  colorToRgb32(MessageConfig::BUBBLE_TEXT_MAIN_COLOR),
-      colorToRgb32(MessageConfig::BUBBLE_TEXT_SHADOW_COLOR),  # 13 Bubble default
-	  colorToRgb32(MessageConfig::DARK_BUBBLE_TEXT_MAIN_COLOR),
-      colorToRgb32(MessageConfig::DARK_BUBBLE_TEXT_SHADOW_COLOR),  # 14 Dark Bubble default
-	  colorToRgb32(MessageConfig::BUBBLE_TEXT_SHADOW_COLOR),  
-	  colorToRgb32(MessageConfig::BUBBLE_TEXT_SHADOW_YELLOW)# 15 Yellow bubble
+      MessageConfig::LIGHT_TEXT_SHADOW_COLOR,  # 12 Light default
+	    MessageConfig::BUBBLE_TEXT_MAIN_COLOR,
+      MessageConfig::BUBBLE_TEXT_SHADOW_COLOR,  # 13 Bubble default
+	    MessageConfig::DARK_BUBBLE_TEXT_MAIN_COLOR,
+      MessageConfig::DARK_BUBBLE_TEXT_SHADOW_COLOR,  # 14 Dark Bubble default
+	    MessageConfig::BUBBLE_TEXT_SHADOW_COLOR,  
+	    MessageConfig::BUBBLE_TEXT_SHADOW_YELLOW  # 15 Yellow bubble
     ]
 	if $Bubble==1 || $Bubble==2 || $Bubble==5
 		color = 13
