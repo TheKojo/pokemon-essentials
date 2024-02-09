@@ -119,6 +119,8 @@ class Game_Character
     case val
     when 6 then @move_time = 0.05
     when 5 then @move_time = 0.1
+    when 4 then @move_time = 0.11
+    when 3 then @move_time = 0.16
     else        @move_time = 2.0 / (2**val)
     end
   end
@@ -138,9 +140,21 @@ class Game_Character
   def pattern_update_speed
     return @jump_time * 2 if jumping?
     ret = @move_time * 2
-    ret *= 1.5 if @move_speed >= 3
-    ret *= 3 if @move_speed >= 5   # Cycling speed or faster; slower animation
-    echoln "move speed is "+@move_speed.to_s
+    case @move_speed
+    when 3 
+      ret *= 1.7
+    when 4
+      ret *= 2.5
+    when 5
+      ret *= 3.75
+    when 6
+      ret *= 3.75
+    when 7
+      ret *= 3.75
+    end
+    #ret *= 1.5 if @move_speed >= 3
+    #ret *= 1.65 if @move_speed >= 4
+    #ret *= 2.5 if @move_speed >= 5   # Cycling speed or faster; slower animation
     return ret
   end
 

@@ -73,31 +73,103 @@ class Sprite_Character < RPG::Sprite
     @surfbase = Sprite_SurfBase.new(self, viewport) if character == $game_player
     self.zoom_x = TilemapRenderer::ZOOM_X
     self.zoom_y = TilemapRenderer::ZOOM_Y
-	#CUSTOMIZATION
-	buildTrainerSpriteSheets if character == $game_player
-	#
+    #CUSTOMIZATION
+    buildTrainerSpriteSheets if character == $game_player
+    #
     update
   end
 
+  def replaceColor(bitmap, oldColor, newColor)
+    bitmap.height.times do |y|
+      bitmap.width.times do |x|
+        color = bitmap.get_pixel(x, y)
+        if color.red == oldColor.red && color.green == oldColor.green && color.blue == oldColor.blue
+          bitmap.set_pixel(x, y, newColor)
+        end
+      end
+    end  
+  end
+
+  def setSkinColor(skinBitmap, val)
+    replaceColor(skinBitmap, @defaultSkinColor[0], @skinColors[val][0]);
+    replaceColor(skinBitmap, @defaultSkinColor[1], @skinColors[val][1]);
+    replaceColor(skinBitmap, @defaultSkinColor[2], @skinColors[val][2]);
+    replaceColor(skinBitmap, @defaultSkinColor[3], @skinColors[val][3]);
+  end
+
   def buildTrainerSpriteSheets
+    @defaultSkinColor = [Color.new(248, 220, 204), Color.new(248,208,184), Color.new(215,161,149), Color.new(137,80,47)]
+    @skinColors = [
+      [Color.new(169, 114, 84), Color.new(148,93,66), Color.new(108,61,42), Color.new(72,40,16)]
+    ]
+
     useFemale = $player.female?
-    useFemale = true
+    useFemale = false
+    drawBag = false
+    preset = 3
 	  @customization_loc = "Graphics/Characters/Customization/"
     @ride_loc = "Graphics/Characters/"
-  	@skin_name = "LIGHT"
-    @hair_name = useFemale ? "PONYTAIL": "EXPLORER"
-    @hair_color_name = "BLONDE"
-    @eye_name = useFemale ? "GREEN": "RED"
-    @hat_name = useFemale ? "SUNHAT": "DESERTCAP"
-    @shirt_name = "TRAINER"
-    @glove_name = "TRAINER"
-    @pants_name = "CARGO"
-    @shoe_name = "BOOTS"
-    @bag_name = "BASIC"
-    @gender = useFemale ? "Female/" : "Male/"
-
     @ride_name = "OW_DOONGO"
-    $PokemonGlobal.riding = true
+    $PokemonGlobal.riding = false
+    if preset == 0
+      useFemale = false
+      @skin_name = "2"
+      @hair_name = useFemale ? "PONYTAIL": "EXPLORER"
+      @hair_color_name = "BLONDE"
+      @eye_name = useFemale ? "GREEN": "RED"
+      @hat_name = useFemale ? "SUNHAT": "DESERTCAP"
+      @shirt_name = "TRAINER"
+      @glove_name = "TRAINER"
+      @pants_name = "CARGO"
+      @shoe_name = "BOOTS"
+      @bag_name = drawBag ? "BASIC" : "NONE"
+      @gender = useFemale ? "Female/" : "Male/"
+    end
+    if preset == 1
+      useFemale = true
+      @skin_name = "2"
+      @hair_name = useFemale ? "PONYTAIL": "EXPLORER"
+      @hair_color_name = "BLONDE"
+      @eye_name = useFemale ? "GREEN": "RED"
+      @hat_name = useFemale ? "SUNHAT": "DESERTCAP"
+      @shirt_name = "TRAINER"
+      @glove_name = "TRAINER"
+      @pants_name = "CARGO"
+      @shoe_name = "BOOTS"
+      @bag_name = drawBag ? "BASIC" : "NONE"
+      @gender = useFemale ? "Female/" : "Male/"
+      $PokemonGlobal.riding = true
+    end
+    if preset == 2
+      useFemale = false
+      @skin_name = "8"
+      @hair_name = "DREADS"
+      @hair_color_name = "COBALT"
+      @eye_name = "BLUE"
+      @hat_name = "HEADBAND"
+      @shirt_name = "OVERALLS"
+      @glove_name = "TRAINER_PINK"
+      @pants_name = "OVERALLS"
+      @shoe_name = "SNEAKER"
+      @bag_name = drawBag ? "BASIC" : "NONE"
+      @gender = useFemale ? "Female/" : "Male/"
+    end
+    if preset == 3
+      useFemale = true
+      @skin_name = "6"
+      @hair_name = "PRINCESS"
+      @hair_color_name = "MAROON"
+      @eye_name = "PURERED"
+      @hat_name = "BANDANA"
+      @shirt_name = "CROPWHITE"
+      @glove_name = "KNUCKLER"
+      @pants_name = "JEANSHORT"
+      @shoe_name = "STRIPEDSTOCKING"
+      @bag_name = drawBag ? "BASIC" : "NONE"
+      @gender = useFemale ? "Female/" : "Male/"
+    end
+
+
     #$game_player.set_movement_type(:riding)
 
     @customization_bitmaps = {}
@@ -123,7 +195,7 @@ class Sprite_Character < RPG::Sprite
       #----------------------------------------
       #Hat
       @customization_bitmaps["hat#{suffix}"]  = AnimatedBitmap.new(@customization_loc+"Unisex/Hat/hat_" +@hat_name+suffix, @character.character_hue)
-      @customization_bitmaps["hats#{suffix}"] = AnimatedBitmap.new(@customization_loc+"Unisex/Hat/hats_" +@hat_name+suffix, @character.character_hue)
+      @customization_bitmaps["faceshadow#{suffix}"] = AnimatedBitmap.new(@customization_loc+"Unisex/Skin/faceshadow_" +@skin_name+suffix, @character.character_hue)
       #Shirt
       @customization_bitmaps["shirt#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirt_" +@shirt_name+suffix, @character.character_hue)
       @customization_bitmaps["shirtr#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Shirt/shirtr_" +@shirt_name+suffix, @character.character_hue)
@@ -139,10 +211,16 @@ class Sprite_Character < RPG::Sprite
       @customization_bitmaps["glovel#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Gloves/glovel_" +@glove_name+suffix, @character.character_hue)
       #Bag
       @customization_bitmaps["bag#{suffix}"] = AnimatedBitmap.new(@customization_loc+@gender+"Bag/bag_" +@bag_name+suffix, @character.character_hue)
+      
+      #setSkinColor(@customization_bitmaps["skin#{suffix}"].bitmap, 0)
+      #setSkinColor(@customization_bitmaps["armr#{suffix}"].bitmap, 0)
+      #setSkinColor(@customization_bitmaps["arml#{suffix}"].bitmap, 0)
+      #setSkinColor(@customization_bitmaps["legr#{suffix}"].bitmap, 0)
+      #setSkinColor(@customization_bitmaps["legl#{suffix}"].bitmap, 0)
     end
 
     #Order to layer the parts, from bottom to top
-    @walkrun_layer_order = ["skin","legr","legl","shoer","shoel","pantsr","pantsl","shirt","arml","bag","armr","shirtr","shirtl","glover","glovel","eye","hair","hats","hat"]
+    @walkrun_layer_order = ["skin","legr","legl","shoer","shoel","pantsr","pantsl","shirt","arml","bag","armr","shirtr","shirtl","glover","glovel","eye","faceshadow","hair","hat"]
     #@ride_layer_order
 
     echoln "Assembling trainer sprite..."
@@ -173,50 +251,82 @@ class Sprite_Character < RPG::Sprite
 
   def assembleRide
     #Setup
-    player_bitmap = AnimatedBitmap.new(@customization_loc+"blank_ride", @character.character_hue)
     ride_bitmap = AnimatedBitmap.new(@ride_loc.to_s+@ride_name.to_s, @character.character_hue)
+    player_bitmap = AnimatedBitmap.new(@customization_loc+"blank_ride", @character.character_hue)
+    
+    playerSize = 200
+    rideBitmapSize = ride_bitmap.width/2
+    adjustmentNeededPerFrame = (rideBitmapSize - playerSize)/4
+    sizeAdjustX = adjustmentNeededPerFrame/2
+    sizeAdjustY = adjustmentNeededPerFrame
+    sizeAdjustX *= 2 #Resolution adjustment
+    sizeAdjustY *= 2 #Resolution adjustment
 
-    #Down movement
+    echoln "adjustmentNeededPerFrame" + adjustmentNeededPerFrame.to_s
+
+    #Down movement---------------------------------
+    #Assemble player layers first if player needs to appear behind the ride sprite
     @walkrun_layer_order.each do |part|
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 0, 0, 0, 0, 0, -12*2)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 1, 0, 0, 0, 0, -12*2)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 2, 0, 0, 0, 0, -12*2)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 3, 0, 0, 0, 0, -12*2)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 0, 0, 0, 0, sizeAdjustX, -12*2+sizeAdjustY)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 1, 0, 0, 0, sizeAdjustX, -12*2+2+sizeAdjustY)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 2, 0, 0, 0, sizeAdjustX, -12*2+sizeAdjustY)
+      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 3, 0, 0, 0, sizeAdjustX, -12*2+2+sizeAdjustY)
     end
-
+    #Put ride sprite on top layer of bitmap 
     assembleSingleRow(player_bitmap, ride_bitmap, 0, 0, 0)
 
-    #Left movement
-    assembleRideLeftRight(player_bitmap, ride_bitmap, 1)
+    #Left movement---------------------------------
+    assembleRideLeftRight(player_bitmap, ride_bitmap, 1, sizeAdjustX, sizeAdjustY)
 
-    #Right movement
-    assembleRideLeftRight(player_bitmap, ride_bitmap, 2)
+    #Right movement--------------------------------
+    assembleRideLeftRight(player_bitmap, ride_bitmap, 2, sizeAdjustX, sizeAdjustY)
 
-    #Up movement
+    #Up movement-----------------------------------
+    #Start by putting ride sprite on the bottom layer of the bitmap
     assembleSingleRow(player_bitmap, ride_bitmap, 3, 0, 0)
 
+    #Iterate through player parts and layer onto bitmap
     @walkrun_layer_order.each do |part|
       xPos = 0
       yOffset = -6*2
       if (isLeg?(part) && !isFarPart?(part)) #Right Leg
         xPos = 1
-        yOffset -= 2
+        yOffset -= 4
       end
       if (isLeg?(part) && isFarPart?(part)) #Left Leg
         xPos = 3
-        yOffset -= 2
+        yOffset -= 4
       end
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 0, 3, xPos, 3, 0, yOffset)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 1, 3, xPos, 3, 0, yOffset)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 2, 3, xPos, 3, 0, yOffset)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 3, 3, xPos, 3, 0, yOffset)
+
+      for i in 0..3
+        bob = 0
+        if (i % 2 != 0)
+          bob = -2
+        end
+        #For head only take all frames rather than just first
+        if (isHead?(part))
+          xPos = i
+          if (i % 2 != 0)
+            bob -= 2*2 #Readjustment since every other frame moves head parts up by 2 pixels
+          end
+        end
+        assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], i, 3, xPos, 3, sizeAdjustX, yOffset+bob+sizeAdjustY)
+      end
+
+      #assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 0, 3, xPos, 3, 0, yOffset)
+      #assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 1, 3, xPos, 3, 0, yOffset-2)
+      #assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 2, 3, xPos, 3, 0, yOffset)
+      #assembleSingleFrame(player_bitmap,@customization_bitmaps[part+"_run"], 3, 3, xPos, 3, 0, yOffset-2)
     end
 
     return player_bitmap
   end
 
-  def assembleRideLeftRight(player_bitmap, ride_bitmap, direction) #1 = left, 2 = right
+  def assembleRideLeftRight(player_bitmap, ride_bitmap, direction, sizeAdjustX, sizeAdjustY) #1 = left, 2 = right
+    #Start by putting ride sprite on the bottom layer of the bitmap
     assembleSingleRow(player_bitmap, ride_bitmap, direction, 0, 0)
+
+    #Iterate through player parts and layer onto bitmap
     @walkrun_layer_order.each do |part|
       #Default to picking the part from the first frame of the run animation
       suffix = "_run"
@@ -232,15 +342,25 @@ class Sprite_Character < RPG::Sprite
         suffix = ""
         xPos = 1
         xOffset -= 4
-        yOffset += 2
+        yOffset += 4
       end
       if (direction == 2)
         xOffset *= -1
       end
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 0, direction, xPos, direction, xOffset, yOffset)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 1, direction, xPos, direction, xOffset, yOffset-2)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 2, direction, xPos, direction, xOffset, yOffset)
-      assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], 3, direction, xPos, direction, xOffset, yOffset-2)
+      for i in 0..3
+        bob = 0
+        if (i % 2 != 0)
+          bob = -2
+        end
+        #For head only take all frames rather than just first
+        if (isHead?(part))
+          xPos = i
+          if (i % 2 != 0)
+            bob += 2*2 #Readjustment since every other frame moves head parts up by 2 pixels
+          end
+        end
+        assembleSingleFrame(player_bitmap,@customization_bitmaps[part+suffix], i, direction, xPos, direction, xOffset+sizeAdjustX, yOffset+bob+sizeAdjustY)
+      end
     end
   end
 
@@ -248,6 +368,14 @@ class Sprite_Character < RPG::Sprite
   def isFarPart?(part)
     #Left/Right movement frames have these parts in the background of the character and don't need to be drawn for ride animations. These have "l" appended at the end rather than "r"
     if (part == "arml" || part == "legl" || part == "shirtl" || part == "pantsl" || part == "glovel" || part == "shoel")
+      return true
+    else
+      return false
+    end
+  end
+
+  def isHead?(part)
+    if (part == "hair" || part == "hat" || part == "faceshadow" || part == "eye" || part == "eyewear") 
       return true
     else
       return false
@@ -296,6 +424,7 @@ class Sprite_Character < RPG::Sprite
   end
 
   def dispose
+    echoln "disposing"
     @bushbitmap&.dispose
     @bushbitmap = nil
     @charbitmap&.dispose
@@ -321,6 +450,7 @@ class Sprite_Character < RPG::Sprite
     @charbitmap = nil
     @bushbitmap&.dispose
     @bushbitmap = nil
+    echoln "refreshing " + @character_name + " game player is "+(@character == $game_player).to_s
     if @tile_id >= 384
       @charbitmap = pbGetTileBitmap(@character.map.tileset_name, @tile_id,
                                     @character_hue, @character.width, @character.height)
@@ -332,25 +462,24 @@ class Sprite_Character < RPG::Sprite
       self.ox = @cw / 2
       self.oy = @ch
     elsif @character_name != ""
-		if (@walk_sheet.nil? || @run_sheet.nil?)
-			buildTrainerSpriteSheets
-		end
-		
-		#@charbitmap = nil
-		if (@character == $game_player)
-			echoln "char bitmap: "+@character_name
-			if @character_name == "trrun000"
-				@charbitmap = @run_sheet
-			else
-				@charbitmap = @walk_sheet
-			end
-			#@charbitmap = AnimatedBitmap.new("Graphics/Characters/Customization/Skin/skin_"+@skin_name, @character_hue)
-		else
-      @charbitmap = AnimatedBitmap.new(
-        "Graphics/Characters/" + @character_name, @character_hue
-      )
-      RPG::Cache.retain("Graphics/Characters/", @character_name, @character_hue) if @character == $game_player
-	end
+      if (@character == $game_player && (@walk_sheet.nil? || @run_sheet.nil?))
+        buildTrainerSpriteSheets if @character == $game_player
+      end
+      
+      #@charbitmap = nil
+      if (@character == $game_player)
+        if @character_name == "trrun000"
+          @charbitmap = @run_sheet.copy
+        else
+          @charbitmap = @walk_sheet.copy
+        end
+        #@charbitmap = AnimatedBitmap.new("Graphics/Characters/Customization/Skin/skin_"+@skin_name, @character_hue)
+      else
+        @charbitmap = AnimatedBitmap.new(
+          "Graphics/Characters/" + @character_name, @character_hue
+        )
+        RPG::Cache.retain("Graphics/Characters/", @character_name, @character_hue) if @character == $game_player
+      end
       @charbitmapAnimated = true
       @spriteoffset = @character_name[/offset/i]
       @cw = @charbitmap.width / 4

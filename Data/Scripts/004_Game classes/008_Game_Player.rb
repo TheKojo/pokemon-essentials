@@ -92,7 +92,7 @@ class Game_Player < Game_Character
       self.move_speed = 4 if !@move_route_forcing
       new_charset = pbGetPlayerCharset(meta.walk_charset)
     when :riding
-      self.move_speed = 6 if !@move_route_forcing
+      self.move_speed = 5 if !@move_route_forcing
     else   # :walking, :jumping, :walking_stopped
       self.move_speed = 3 if !@move_route_forcing
       new_charset = pbGetPlayerCharset(meta.walk_charset)
