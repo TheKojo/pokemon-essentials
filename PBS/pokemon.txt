@@ -169,7 +169,6 @@ WildItemUncommon = METALPOWDER
 BattlerPlayerY = 3
 BattlerEnemyY = 10
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [EEVEE]
 Name = Eevee
@@ -225,7 +224,6 @@ Pokedex = An abnormal genetic mutation made it lose its legs. However, it's much
 BattlerPlayerY = 7
 BattlerEnemyY = 19
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [JOLTEON]
 Name = Jolteon
@@ -253,7 +251,6 @@ Pokedex = Its body contains pure light energy that causes it to release blinding
 BattlerPlayerY = 5
 BattlerEnemyY = 13
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [FLAREON]
 Name = Flareon
@@ -281,7 +278,6 @@ Pokedex = Flareon's fluffy fur releases heat into the air so that its body does 
 BattlerPlayerY = 15
 BattlerEnemyY = 20
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [LEDYBA]
 Name = Ledyba
@@ -419,7 +415,6 @@ Pokedex = An Espeon is extremely loyal to any trainer it considers to be worthy.
 BattlerPlayerY = 7
 BattlerEnemyY = 14
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [UMBREON]
 Name = Umbreon
@@ -447,7 +442,6 @@ Pokedex = Umbreon evolved from exposure to the moon's energy pulses. It lurks in
 BattlerPlayerY = 1
 BattlerEnemyY = 14
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [UNOWN]
 Name = Unown
@@ -473,7 +467,6 @@ Pokedex = A mysterious Pokémon that resides in the Spectral Zone. It resembles 
 BattlerPlayerY = 10
 BattlerEnemyY = 25
 BattlerAltitude = 19
-Evolutions = 
 #-------------------------------
 [SMOOCHUM]
 Name = Smoochum
@@ -532,7 +525,6 @@ WildItemUncommon = ELECTIRIZER
 BattlerPlayerY = 11
 BattlerEnemyY = 6
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [MAGBY]
 Name = Magby
@@ -588,7 +580,6 @@ WildItemUncommon = LUCKYEGG
 BattlerPlayerY = 7
 BattlerEnemyY = 20
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [NINCADA]
 Name = Nincada
@@ -643,7 +634,6 @@ Pokedex = Its metabolic rate is somehow higher than what its biology should allo
 BattlerPlayerY = -1
 BattlerEnemyY = 45
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [SHEDINJA]
 Name = Shedinja
@@ -670,7 +660,6 @@ Pokedex = They are found after a Ninjask uses its exoskeleton as a dummy. The pe
 BattlerPlayerY = -14
 BattlerEnemyY = -2
 BattlerAltitude = 13
-Evolutions = 
 #-------------------------------
 [MIMEJR]
 Name = Mime Jr.
@@ -698,7 +687,6 @@ WildItemUncommon = LEPPABERRY
 BattlerPlayerY = 6
 BattlerEnemyY = 8
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [HAPPINY]
 Name = Happiny
@@ -725,7 +713,6 @@ WildItemUncommon = OVALSTONE
 BattlerPlayerY = 26
 BattlerEnemyY = 28
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [ELECTIVIRE]
 Name = Electivire
@@ -751,7 +738,6 @@ WildItemUncommon = ELECTIRIZER
 BattlerPlayerY = 30
 BattlerEnemyY = 34
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [MAGMORTAR]
 Name = Magmortar
@@ -777,7 +763,6 @@ WildItemUncommon = MAGMARIZER
 BattlerPlayerY = 25
 BattlerEnemyY = 9
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [LEAFEON]
 Name = Leafeon
@@ -804,7 +789,6 @@ Pokedex = Just like a plant, it uses photosynthesis. As a result, it is always e
 BattlerPlayerY = 23
 BattlerEnemyY = 17
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [GLACEON]
 Name = Glaceon
@@ -831,7 +815,6 @@ Pokedex = It's only seen during the coldest of nights. It gained immeasurable st
 BattlerPlayerY = 22
 BattlerEnemyY = 37
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [TRUBBISH]
 Name = Trubbish
@@ -952,7 +935,6 @@ BattlerEnemyX = 0
 BattlerEnemyY = 0
 BattlerShadowX = 0
 BattlerShadowSize = 2
-Evolutions =
 #-------------------------------
 [SYLVEON]
 Name = Sylveon
@@ -979,7 +961,6 @@ Pokedex = It uses its feelers to bring its opponent into its thick fur and smoth
 BattlerPlayerY = 15
 BattlerEnemyY = 6
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [KOKOALA]
 Name = Kokoala
@@ -1061,7 +1042,6 @@ Pokedex = It's very durable, as it can use its retractable plates to create a sh
 BattlerPlayerY = 78
 BattlerEnemyY = 70
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PYROO]
 Name = Pyroo
@@ -1143,7 +1123,6 @@ Pokedex = The springs in its arms and legs allow it to leap and throw punches wi
 BattlerPlayerY = 15
 BattlerEnemyY = 17
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [TAPLAT]
 Name = Taplat
@@ -1226,7 +1205,6 @@ Pokedex = It has a second brain located near its back. Its ESP is so strong that
 BattlerPlayerY = 2
 BattlerEnemyY = 29
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [OPOSSOL]
 Name = Opossol
@@ -1281,7 +1259,6 @@ Pokedex = Scientists have had difficulty determining whether this Pokémon is pl
 BattlerPlayerY = 6
 BattlerEnemyY = 12
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [RYPECK]
 Name = Rypeck
@@ -1359,11 +1336,10 @@ Shape = Bipedal
 Habitat = Grassland
 RegionalNumbers = 14
 Category = Sharp Edge
-Pokedex = Its steel jaws are like pincers that can shear through anything. There are traces of iron all over its body.
+Pokedex = The iron absorbed from the blood spatter of its victims all over its body caused it to evolve. Its tail feathers developed into an extra pair of razor sharp wings, allowing it to cut through virtually anything at supersonic speeds.
 BattlerPlayerY = 35
 BattlerEnemyY = 47
 BattlerAltitude = 18
-Evolutions = 
 #-------------------------------
 [DENGO]
 Name = Dengo
@@ -1416,7 +1392,6 @@ Pokedex = It's most active right before sunrise and sunset. The lenses around it
 BattlerPlayerY = 30
 BattlerEnemyY = 49
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [TUMBLI]
 Name = Tumbli
@@ -1499,7 +1474,6 @@ Pokedex = It reveals its massive form by saving energy and plant matter until it
 BattlerPlayerY = 8
 BattlerEnemyY = 21
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PANSURGE]
 Name = Nimbian
@@ -1556,7 +1530,6 @@ WildItemUncommon = OCCABERRY
 BattlerPlayerY = 43
 BattlerEnemyY = -14
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [DRYGON]
 Name = Drygon
@@ -1609,7 +1582,6 @@ Pokedex = Its flexible jaw allows it to eat anything. Its bites are infectious a
 BattlerPlayerY = 68
 BattlerEnemyY = 79
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PILOVE]
 Name = Pilove
@@ -1691,7 +1663,6 @@ WildItemUncommon = SILVERPOWDER
 BattlerPlayerY = 24
 BattlerEnemyY = 42
 BattlerAltitude = 27
-Evolutions = 
 #-------------------------------
 [SCAGGOT]
 Name = Scurgot
@@ -1769,7 +1740,6 @@ Pokedex = They're unpopular Pokémon due to the fact that one of them showing up
 BattlerPlayerY = 16
 BattlerEnemyY = 0
 BattlerAltitude = 20
-Evolutions = 
 #-------------------------------
 [LARVUZZ]
 Name = Larvuzz
@@ -1848,7 +1818,6 @@ Pokedex = It can fly at a speed of up to Mach 1. This Pokémon can swoop in for 
 BattlerPlayerY = 56
 BattlerEnemyY = 102
 BattlerAltitude = 38
-Evolutions = 
 #-------------------------------
 [LEDIMA]
 Name = Ledima
@@ -1875,7 +1844,6 @@ Pokedex = Seeing one is said to give good luck. It likes to protect those close 
 BattlerPlayerY = 56
 BattlerEnemyY = 0
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [MYRADEUX]
 Name = Myradeux
@@ -1902,7 +1870,6 @@ Pokedex = No one knows which side is its true head. It can spin webs and eat pre
 BattlerPlayerY = 70
 BattlerEnemyY = 55
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [DRAKEON]
 Name = Drakeon
@@ -1929,7 +1896,6 @@ Pokedex = It is the rarest of all evolutions of Eevee. It is said that it can se
 BattlerPlayerY = 56
 BattlerEnemyY = 42
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [OLVEE]
 Name = Olvee
@@ -1984,7 +1950,6 @@ Pokedex = It avoids foes by hiding in plain sight near rocks. If that fails, its
 BattlerPlayerY = 60
 BattlerEnemyY = 63
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [VENEON]
 Name = Veneon
@@ -2011,7 +1976,6 @@ Pokedex = Its body bloats while it's holding poisonous gas. It releases these ga
 BattlerPlayerY = 37
 BattlerEnemyY = 38
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PESTEON]
 Name = Pesteon
@@ -2038,7 +2002,6 @@ Pokedex = It's the smallest evolution of Olvee, though one of the fastest. The a
 BattlerPlayerY = 54
 BattlerEnemyY = 49
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [WINDEON]
 Name = Windeon
@@ -2065,7 +2028,6 @@ Pokedex = It never touches the ground. It lives high in the atmosphere, so they 
 BattlerPlayerY = 30
 BattlerEnemyY = 17
 BattlerAltitude = 36
-Evolutions = 
 #-------------------------------
 [CHAMPEON]
 Name = Champeon
@@ -2092,7 +2054,6 @@ Pokedex = It can adapt to multiple kinds of fighting styles, using its arms, leg
 BattlerPlayerY = 56
 BattlerEnemyY = 3
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PHANTEON]
 Name = Phanteon
@@ -2119,7 +2080,6 @@ Pokedex = If is said that Phanteon may lurk cemeteries and graveyards to eat the
 BattlerPlayerY = 56
 BattlerEnemyY = 4
 BattlerAltitude = 9
-Evolutions = 
 #-------------------------------
 [SANDEON]
 Name = Sandeon
@@ -2146,7 +2106,6 @@ Pokedex = The horn on its face and its large claws let it burrow underground eas
 BattlerPlayerY = 81
 BattlerEnemyY = 30
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [IRONEON]
 Name = Ironeon
@@ -2173,7 +2132,6 @@ Pokedex = The skin on this Pokémon gets harder every time it molts. As a result
 BattlerPlayerY = 37
 BattlerEnemyY = 48
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PAJAMBAZ]
 Name = Dreamare
@@ -2201,7 +2159,6 @@ Pokedex = It sleeps nearly every hour of the day. Anyone who rests their head on
 BattlerPlayerY = 21
 BattlerEnemyY = 27
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [TAURING]
 Name = Tauring
@@ -2255,7 +2212,6 @@ Pokedex = Its immense strength causes its body to generate high amounts of heat 
 BattlerPlayerY = 29
 BattlerEnemyY = 31
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [CHICKATOO]
 Name = Chickatoo
@@ -2310,7 +2266,6 @@ Pokedex = They tend to be extremely vain and prefer not to battle.
 BattlerPlayerY = 21
 BattlerEnemyY = 5
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [BRAWKEREL]
 Name = Brawkerel
@@ -2337,7 +2292,6 @@ Pokedex = It avoids flying often to store its energy for combat. It always tries
 BattlerPlayerY = 3
 BattlerEnemyY = 18
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [AYCHEM]
 Name = Aychem
@@ -2363,7 +2317,6 @@ Pokedex = An artificial Pokémon designed to perform various functions. It can c
 BattlerPlayerY = 6
 BattlerEnemyY = 66
 BattlerAltitude = 50
-Evolutions = 
 #-------------------------------
 [MIMESR]
 Name = Mime Sr.
@@ -2392,7 +2345,6 @@ WildItemUncommon = LEPPABERRY
 BattlerPlayerY = 0
 BattlerEnemyY = 14
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [GLAMORICE]
 Name = Glamorice
@@ -2419,7 +2371,6 @@ Pokedex = Travelers who get seduced by this Pokémon on snowy mountains never ge
 BattlerPlayerY = 0
 BattlerEnemyY = 16
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PLAIGRANT]
 Name = Plaigrant
@@ -2445,7 +2396,6 @@ Pokedex = It has such a harsh smell that anything gets sick simply by going near
 BattlerPlayerY = 20
 BattlerEnemyY = 15
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [GOBLAT]
 Name = Invarn
@@ -2501,7 +2451,6 @@ Pokedex = Most of the time it conceals itself with its single massive wing. It h
 BattlerPlayerY = 54
 BattlerEnemyY = 100
 BattlerAltitude = 30
-Evolutions = 
 #-------------------------------
 [DYNATITE]
 Name = Dynatite
@@ -2557,7 +2506,6 @@ WildItemUncommon = EVERSTONE
 BattlerPlayerY = 52
 BattlerEnemyY = 45
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [DRABI]
 Name = Drabi
@@ -2638,7 +2586,6 @@ Pokedex = It has an extremely long lifespan, and it can regenerate from nearly a
 BattlerPlayerY = 58
 BattlerEnemyY = 46
 BattlerAltitude = 18
-Evolutions = 
 #-------------------------------
 [CLOWNUN]
 Name = Clownun
@@ -2720,7 +2667,6 @@ Pokedex = Not once has a Jestrio been seen frowning. It can detect sadness in ot
 BattlerPlayerY = 19
 BattlerEnemyY = 46
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [AUDIVER]
 Name = Audiver
@@ -2775,7 +2721,6 @@ Pokedex = By extending its arms and putting its palms over its opponent's ears, 
 BattlerPlayerY = 58
 BattlerEnemyY = 46
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [ROTANT]
 Name = Rotant
@@ -2828,7 +2773,6 @@ Pokedex = This Pokémon can result from two Rotant getting their tails knotted t
 BattlerPlayerY = 16
 BattlerEnemyY = 34
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [JUNKSTER]
 Name = Junkster
@@ -2857,7 +2801,6 @@ WildItemRare = BIGNUGGET
 BattlerPlayerY = 58
 BattlerEnemyY = 26
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PIROTT]
 Name = Pirott
@@ -2939,7 +2882,6 @@ Pokedex = It commands Pirott and Beackaneer from the skies above oceans. It stri
 BattlerPlayerY = 58
 BattlerEnemyY = 221
 BattlerAltitude = 13
-Evolutions = 
 #-------------------------------
 [BARNABBLE]
 Name = Barnabble
@@ -2966,7 +2908,6 @@ Pokedex = People often get injured from accidentally stepping on their hard shel
 BattlerPlayerY = 4
 BattlerEnemyY = 16
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [SHRIMBUR]
 Name = Shrimbur
@@ -3019,7 +2960,6 @@ Pokedex = Its chamber can launch either high pressure water or fireballs. There 
 BattlerPlayerY = 17
 BattlerEnemyY = 46
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [SPECTRAIN]
 Name = Spectrain
@@ -3073,7 +3013,6 @@ Pokedex = They come in multiple colors. These Pokémon have lived in the region 
 BattlerPlayerY = 13
 BattlerEnemyY = 40
 BattlerAltitude = 26
-Evolutions = 
 #-------------------------------
 [ELECLEE]
 Name = Paraglee
@@ -3129,7 +3068,6 @@ WildItemCommon = ORANBERRY
 BattlerPlayerY = 46
 BattlerEnemyY = 26
 BattlerAltitude = 10
-Evolutions = 
 #-------------------------------
 [WEEEMU]
 Name = Weeemu
@@ -3157,7 +3095,6 @@ WildItemUncommon = SHARPBEAK
 BattlerPlayerY = 12
 BattlerEnemyY = 11
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [MINORE]
 Name = Minore
@@ -3242,7 +3179,6 @@ WildItemUncommon = HARDSTONE
 BattlerPlayerY = 40
 BattlerEnemyY = 50
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [BURSPINE]
 Name = Burspine
@@ -3295,7 +3231,6 @@ Pokedex = It wrecklessly fires eruptions from its back. This resulted in all its
 BattlerPlayerY = 40
 BattlerEnemyY = 50
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PALEOPLATE]
 Name = Paleoplate
@@ -3348,7 +3283,6 @@ Pokedex = ???
 BattlerPlayerY = 0
 BattlerEnemyY = 14
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PUMETHAL]
 Name = Pumethal
@@ -3374,7 +3308,6 @@ Pokedex = It is an ancient Pokémon that has great strength. It actually lived a
 BattlerPlayerY = 19
 BattlerEnemyY = 30
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [STINGIDNA]
 Name = Stingidna
@@ -3429,7 +3362,6 @@ Pokedex = Their needles can detect and absorb electrical energy. It can inject t
 BattlerPlayerY = 28
 BattlerEnemyY = 19
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PETIYA]
 Name = Petiya
@@ -3486,7 +3418,6 @@ WildItemUncommon = PETAYABERRY
 BattlerPlayerY = 52
 BattlerEnemyY = 19
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [PANAMBA]
 Name = Panamba
@@ -3541,7 +3472,6 @@ Pokedex = It can paralyze other Pokémon just by making eye contact. It can summ
 BattlerPlayerY = 0
 BattlerEnemyY = 10
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PARAPUPA]
 Name = Parapupa
@@ -3597,7 +3527,6 @@ WildItemUncommon = SILVERPOWDER
 BattlerPlayerY = 0
 BattlerEnemyY = 7
 BattlerAltitude = 9
-Evolutions = 
 #-------------------------------
 [BUBBELO]
 Name = Bubbelo
@@ -3624,7 +3553,6 @@ Pokedex = As the largest known Bug-type Pokémon, it is sometimes called the "Gi
 BattlerPlayerY = 22
 BattlerEnemyY = 13
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PARABOX]
 Name = Parabox
@@ -3681,7 +3609,6 @@ WildItemUncommon = QUICKCLAW
 BattlerPlayerY = 6
 BattlerEnemyY = 13
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [HISSCHANCE]
 Name = Gambiss
@@ -3709,7 +3636,6 @@ WildItemUncommon = QUICKCLAW
 BattlerPlayerY = 5
 BattlerEnemyY = 15
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [WOMBURO]
 Name = Womburo
@@ -3737,7 +3663,6 @@ WildItemUncommon = SOFTSAND
 BattlerPlayerY = 0
 BattlerEnemyY = 36
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [GECROK]
 Name = Gecrok
@@ -3793,7 +3718,6 @@ Pokedex = Its claws are strong enough to allow it to walk on walls. As long as i
 BattlerPlayerY = 42
 BattlerEnemyY = 47
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [DENTURLA]
 Name = Denturla
@@ -3820,7 +3744,6 @@ Pokedex = It steals teeth from wild Pokémon to add to its collection. Once it b
 BattlerPlayerY = -2
 BattlerEnemyY = 8
 BattlerAltitude = 14
-Evolutions = 
 #-------------------------------
 [LOOTCOOT]
 Name = Lootcoot
@@ -3873,7 +3796,6 @@ Pokedex = It invades cities and towns to steal various things during the night. 
 BattlerPlayerY = 14
 BattlerEnemyY = 10
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [WADDALOG]
 Name = Waddalog
@@ -3928,7 +3850,6 @@ Pokedex = It can sit in one spot for decades at a time while going unnoticed. Th
 BattlerPlayerY = 20
 BattlerEnemyY = 44
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [AMMOFLAGE]
 Name = Ammoflage
@@ -3955,7 +3876,6 @@ Pokedex = Its six eyes allow it to watch from all angles while disguised. It is 
 BattlerPlayerY = 12
 BattlerEnemyY = 11
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [JURODE]
 Name = Jurode
@@ -3981,7 +3901,6 @@ Pokedex = It is intelligent enough to jury rig inventions. It scavenges through 
 BattlerPlayerY = 0
 BattlerEnemyY = 7
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [JELICUR]
 Name = Jelicur
@@ -4033,7 +3952,6 @@ Pokedex = The white matter on its body is highly corrosive acid formed from leak
 BattlerPlayerY = 0
 BattlerEnemyY = 21
 BattlerAltitude = 10
-Evolutions = 
 #-------------------------------
 [CURIJEL]
 Name = Curijel
@@ -4086,7 +4004,6 @@ Pokedex = It can be found near clouds in the atmosphere to absorb lightning stri
 BattlerPlayerY = 0
 BattlerEnemyY = 21
 BattlerAltitude = 10
-Evolutions = 
 #-------------------------------
 [NION]
 Name = Nion
@@ -4140,7 +4057,6 @@ Pokedex = Its body contains immense nuclear power. It absorbs energy from the su
 BattlerPlayerY = 0
 BattlerEnemyY = 17
 BattlerAltitude = 13
-Evolutions = 
 #-------------------------------
 [CLIMACULE]
 Name = Climacule
@@ -4166,7 +4082,6 @@ Pokedex = It mysteriously changes its form right before the weather shifts. It i
 BattlerPlayerY = 0
 BattlerEnemyY = 17
 BattlerAltitude = 13
-Evolutions = 
 #-------------------------------
 [APOLOLO]
 Name = Apololo
@@ -4195,7 +4110,6 @@ WildItemRare = SUNSTONE
 BattlerPlayerY = 0
 BattlerEnemyY = 3
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [DIANAN]
 Name = Dianan
@@ -4224,7 +4138,6 @@ WildItemRare = MOONSTONE
 BattlerPlayerY = 8
 BattlerEnemyY = 3
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [THORNIE]
 Name = Thornie
@@ -4305,7 +4218,6 @@ Pokedex = Its shell is impossible to penetrate. Most Pokémon don't even try due
 BattlerPlayerY = 16
 BattlerEnemyY = 114
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [LOBBALL]
 Name = Lobball
@@ -4359,7 +4271,6 @@ Pokedex = Both of its claws are made of razor sharp ice. It uses the larger claw
 BattlerPlayerY = 0
 BattlerEnemyY = 160
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [TADPLO]
 Name = Tadplo
@@ -4440,7 +4351,6 @@ Pokedex = It can release a massive amount of toxic explosive energy by inflating
 BattlerPlayerY = 36
 BattlerEnemyY = 38
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [SCORTUR]
 Name = Scortur
@@ -4492,7 +4402,6 @@ Pokedex = It dislikes attacking physically. It typically hides its lower body in
 BattlerPlayerY = 0
 BattlerEnemyY = 11
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [DECAEDILE]
 Name = Decaedile
@@ -4520,7 +4429,6 @@ WildItemRare = BLACKSLUDGE
 BattlerPlayerY = 15
 BattlerEnemyY = 20
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [WRESALL]
 Name = Wresall
@@ -4547,7 +4455,6 @@ Pokedex = Its most famous fighting technique is biting an opponent and then roll
 BattlerPlayerY = 28
 BattlerEnemyY = 19
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [STONELY]
 Name = Stonely
@@ -4574,7 +4481,6 @@ Pokedex = It lives well underwater, despite its typing. People avoid it to preve
 BattlerPlayerY = 18
 BattlerEnemyY = 7
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [VUUDU]
 Name = Vuudu
@@ -4628,7 +4534,6 @@ Pokedex = It lures children out from towns in an attempt to find its old owner. 
 BattlerPlayerY = 0
 BattlerEnemyY = 16
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [INFLATANT]
 Name = Inflatant
@@ -4654,7 +4559,6 @@ Pokedex = It lives around plants to consume sap and nectar, which its body store
 BattlerPlayerY = 10
 BattlerEnemyY = 16
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [OPHIUCEUS]
 Name = Ophiuceus
@@ -4682,7 +4586,6 @@ Pokedex = ???
 BattlerPlayerY = 13
 BattlerEnemyY = 10
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [ANOCTOPUS]
 Name = Anoctopus
@@ -4734,7 +4637,6 @@ Pokedex = Its ink and flexible body allow it to disguise itself as anything, as 
 BattlerPlayerY = 19
 BattlerEnemyY = 6
 BattlerAltitude = 6
-Evolutions = 
 #-------------------------------
 [MAIRKURA]
 Name = Mairkura
@@ -4762,7 +4664,6 @@ Pokedex = It awakens at night near towns and invades the dreams of anyone asleep
 BattlerPlayerY = 35
 BattlerEnemyY = 38
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [BUOYCHIN]
 Name = Buoychin
@@ -4790,7 +4691,6 @@ WildItemRare = BIGPEARL
 BattlerPlayerY = 4
 BattlerEnemyY = 11
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [AQUIDNA]
 Name = Aquidna
@@ -4817,7 +4717,6 @@ Pokedex = It sleeps underwater, using its spiny shell as protection while it's i
 BattlerPlayerY = 0
 BattlerEnemyY = 25
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [NAVARINE]
 Name = Navarine
@@ -4844,7 +4743,6 @@ Pokedex = It normally lives anchored deep in the ocean, but sometimes comes up o
 BattlerPlayerY = 0
 BattlerEnemyY = 25
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [KUCKAW]
 Name = Kuckaw
@@ -4870,7 +4768,6 @@ Pokedex = This parasitic Pokémon demands constant attention. It first eats near
 BattlerPlayerY = 0
 BattlerEnemyY = 22
 BattlerAltitude = 21
-Evolutions = 
 #-------------------------------
 [BOOMBARD]
 Name = Boombard
@@ -4896,7 +4793,6 @@ Pokedex = It generates ear splitting sound waves with its wings.
 BattlerPlayerY = 0
 BattlerEnemyY = 22
 BattlerAltitude = 21
-Evolutions = 
 #-------------------------------
 [DECAPOTA]
 Name = Decapota
@@ -4950,7 +4846,6 @@ Pokedex = A strange mutation made it suddenly grow uncontrollably. The longer it
 BattlerPlayerY = 0
 BattlerEnemyY = 5
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [FLOPOP]
 Name = Flopop
@@ -5003,7 +4898,6 @@ Pokedex = It has less brute strength than its pre-evolved form. Instead, it uses
 BattlerPlayerY = 0
 BattlerEnemyY = 11
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [UNIONI]
 Name = UniOni
@@ -5029,7 +4923,6 @@ Pokedex = It has a deep mental connection to its partner, so they attack only as
 BattlerPlayerY = 0
 BattlerEnemyY = 16
 BattlerAltitude = 3
-Evolutions = 
 #-------------------------------
 [TABLOT]
 Name = Tablot
@@ -5055,7 +4948,6 @@ Pokedex = ?
 BattlerPlayerY = 0
 BattlerEnemyY = 18
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [BOOMERANG]
 Name = Boo-merang
@@ -5107,7 +4999,6 @@ Pokedex = It coordinates its two boomerangs to slice the opponent in quick succe
 BattlerPlayerY = 0
 BattlerEnemyY = 25
 BattlerAltitude = 1
-Evolutions = 
 #-------------------------------
 [ZOMBSHI]
 Name = Zombshi
@@ -5134,7 +5025,6 @@ WildItemCommon = SPELLTAG
 BattlerPlayerY = 0
 BattlerEnemyY = 24
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [MUMUSCLE]
 Name = Mumuscle
@@ -5161,7 +5051,6 @@ WildItemCommon = SPELLTAG
 BattlerPlayerY = 0
 BattlerEnemyY = 24
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [NECROTANEOUS]
 Name = Necrotaneous
@@ -5188,7 +5077,6 @@ WildItemCommon = SPELLTAG
 BattlerPlayerY = 0
 BattlerEnemyY = 24
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [BAMBUB]
 Name = Bambub
@@ -5266,7 +5154,6 @@ Pokedex = It used to be a martial arts master, but it has grown past its prime. 
 BattlerPlayerY = 19
 BattlerEnemyY = 8
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [GLUNEY]
 Name = Gluney
@@ -5321,7 +5208,6 @@ WildItemRare = LEFTOVERS
 BattlerPlayerY = 0
 BattlerEnemyY = 10
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [STINGORE]
 Name = Stingore
@@ -5347,7 +5233,6 @@ Pokedex = It rushes to stab anything that threatens its territory. A sting from 
 BattlerPlayerY = 0
 BattlerEnemyY = 13
 BattlerAltitude = 11
-Evolutions = 
 #-------------------------------
 [JELLON]
 Name = Jellon
@@ -5399,7 +5284,6 @@ Pokedex = Anyone caught in its large gelatinous body becomes trapped and ends up
 BattlerPlayerY = 0
 BattlerEnemyY = 16
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [DOULLOP]
 Name = Doullop
@@ -5426,10 +5310,10 @@ Pokedex = Because it's very weak and tastes good for other Pokémon, it doesn't 
 BattlerPlayerY = 19
 BattlerEnemyY = 7
 BattlerAltitude = 0
-Evolutions = DINGDONE,Level,30
+Evolutions = DINGDON,Level,30
 #-------------------------------
-[DINGDONE]
-Name = Dingdone
+[DINGDON]
+Name = Dingdon
 Types = FAIRY
 BaseStats = 138,76,84,42,76,84
 GenderRatio = Female50Percent
@@ -5448,11 +5332,10 @@ Weight = 28.1
 Color = White
 Shape = Bipedal
 Category = Bread
-Pokedex = Since it's so warm and has a pleasant scent, anyone who gets close to it has their spirits lifted. It pulls off chunks of its sweet edible body to feed its friends.
+Pokedex = Since its warm, fluffy body has a pleasant scent, anyone who gets close to it has their spirits lifted. It pulls off chunks of its sweet edible body to feed its friends.
 BattlerPlayerY = 18
 BattlerEnemyY = 7
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [PLUSHIRI]
 Name = Plushiri
@@ -5531,7 +5414,6 @@ Pokedex = It's rumored to be an old mascot costume inhabited by the spirit of th
 BattlerPlayerY = 0
 BattlerEnemyY = 16
 BattlerAltitude = 0
-Evolutions = 
 #-------------------------------
 [INI]
 Name = Ini
@@ -5554,7 +5436,7 @@ Color = Red
 Shape = Bipedal
 Habitat = Urban
 Category = Parasitic 
-Pokedex = A rare Pokémon with an extremely underdeveloped and frail body. However, it has extremely high levels of psychic abilities that outmeasure every other known creature.
+Pokedex = A rare Pokémon with an extremely underdeveloped and frail body. However, it has absurdly high levels of psychic abilities that outmeasure every other known creature. It hides in small crevices to remain undetected.
 BattlerPlayerY = 0
 BattlerEnemyY = 20
 BattlerAltitude = 1
@@ -5581,8 +5463,7 @@ Color = Red
 Shape = Bipedal
 Habitat = Urban
 Category = Conjoined Twin
-Pokedex = It has two bodies, but the big one has a tiny, almost non-functional brain despite its dense muscles. Its higher level brain functions are in the small body. Neither will live for long if they are separated.
+Pokedex = It has two bodies, but the large one with dense muscles has a tiny, almost non-functional brain. Its higher level brain functions are in the small body. Neither will live for long if they are separated. 
 BattlerPlayerY = 0
 BattlerEnemyY = 20
 BattlerAltitude = 1
-Evolutions = 
