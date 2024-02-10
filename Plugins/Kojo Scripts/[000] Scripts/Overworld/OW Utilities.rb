@@ -56,16 +56,16 @@ end
 
 alias __kojo__pbCreateMessageWindow pbCreateMessageWindow unless defined?(__kojo__pbCreateMessageWindow)
 def pbCreateMessageWindow(viewport = nil, skin = nil)
-  if $Bubble != 0
-		pbSetBubbleArrow(viewport, skin)
-	end
+  #if $Bubble != 0
+		#pbSetBubbleArrow(viewport, skin)
+	#end
   return __kojo__pbCreateMessageWindow(viewport, skin)
 end
 
 alias __kojo__pbDisposeMessageWindow pbDisposeMessageWindow unless defined?(__kojo__pbDisposeMessageWindow)
 def pbDisposeMessageWindow(msgwindow)
+  msgwindow.pbDisposeBubbleArrow
   __kojo__pbDisposeMessageWindow(msgwindow)
-  pbDisposeBubbleArrow
 end
 
 alias __kojo__pbRepositionMessageWindow pbRepositionMessageWindow unless defined?(__kojo__pbRepositionMessageWindow)
@@ -73,7 +73,7 @@ def pbRepositionMessageWindow(msgwindow, linecount = 2)
   __kojo__pbRepositionMessageWindow(msgwindow, linecount)
   if $game_system
     if $game_system.message_position == 2
-      pbSetBubble(msgwindow, linecount)
+      msgwindow.pbSetBubble
     end
   end
 end
@@ -116,115 +116,51 @@ def pbCallBub(status=0, value=nil)
   $Bubble=status
 end
 
-#Instantiate arrow bitmap and default positions
-def pbSetBubbleArrow(viewport, skin)
-  if $game_map
-		interp = pbMapInterpreter
-		thisEvent = interp.get_character(0)
+##=======================
+class Window_AdvancedTextPokemon
+  attr_accessor :bubble_arrow
 
-    #Default position for most cases
-    @arrow = ArrowSprite.new(@viewport, $game_map.events[$talkingEvent])
-    @arrow.setArrowBitmap(BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+1], 2)
-
-    #Put bubble below if player is talking to NPC from above
-    if $game_player.direction == 2 && @arrow.talking_event.direction == 8 && $game_player.y == @arrow.talking_event.y-1
-      @arrow.setArrowBitmap(BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+2], 8)
-    end
-
-	end
-end
-
-def pbSetBubble(msgwindow, linecount)
-	if $Bubble >= 1
-        interp = pbMapInterpreter
-        thisEvent = interp.get_character(0)
-        msgwindow.setSkin(BubbleConfig::BUBBLE_BITMAPS[$Bubble*3])
-        msgwindow.width = BubbleConfig::DEFAULT_WIDTH
-        msgwindow.height = BubbleConfig::DEFAULT_HEIGHT
-        msgwindow.x = @arrow.x - msgwindow.width/2
-        case @arrow.direction
-        when 2 then
-          msgwindow.y = @arrow.y - msgwindow.height + 2*2
-        when 8 then 
-          msgwindow.y = @arrow.y + @arrow.height - 2*2
-        end
-        
-        #Reset
-        $Bubble=0
-        $talkingEvent=0
-    else
-        #Show regular text box, no speech bubble
-        msgwindow.setSkin("Graphics/windowskins/choice 1")
-        msgwindow.height = 102
-        msgwindow.y = Graphics.height - msgwindow.height
-    end
-end
-
-def pbDisposeBubbleArrow
-  echoln "DISPOSING ARROW!"
-	@arrow.dispose if @arrow
-end
-###
-
-def oldJunkPositioning1
-  if $game_map
-		interp = pbMapInterpreter
-		thisEvent = interp.get_character(0)
-		if $game_player.direction==8
-			@arrow = Sprite.new(@viewport)
-			@arrow.bitmap = BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+1]
-			@arrow.x = $game_map.events[$talkingEvent].screen_x - 16
-			@arrow.y = $game_map.events[$talkingEvent].screen_y - 60 + 10 - 20 #CHANGED 2017-04-30
-			@arrow.z = 9999999
-		else
-			@arrow = Sprite.new(@viewport)
-			@arrow.bitmap = BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+2]
-			@arrow.x = $game_map.events[$talkingEvent].screen_x - 16
-			@arrow.y = $game_map.events[$talkingEvent].screen_y  - 6
-			@arrow.z = 9999999
-		end
+  alias __kojo__initialize initialize unless method_defined?(:__kojo__initialize)
+  def initialize(text = "")
+    __kojo__initialize(text)
   end
-end
 
-
-def oldJunkPositioning2
-  if $game_player.direction==8
-    msgwindow.y = $game_map.events[$talkingEvent].screen_y - 144 -20
-    if msgwindow.x<0
-      @NegativeValue = msgwindow.x
-      msgwindow.x+=(-@NegativeValue)
-    elsif msgwindow.x>88
-      @OpposedValue = msgwindow.x-88
-      msgwindow.x-=@OpposedValue
-    end
-    if msgwindow.y>282
-      msgwindow.y = $game_map.events[$talkingEvent].screen_y - 144 -20
-      @arrow.y = $game_map.events[$talkingEvent].screen_y - 60 + 10 -20
-      @arrow.bitmap = BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+1] #Point down
-
-    elsif msgwindow.y<0
-      msgwindow.y = $game_map.events[$talkingEvent].screen_y + @arrow.bitmap.height - 12 -20
-      @arrow.y = $game_map.events[$talkingEvent].screen_y - 6 -20
-      @arrow.bitmap = BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+2] #Point up
-    end
-  else
-    msgwindow.y = $game_map.events[$talkingEvent].screen_y + @arrow.bitmap.height - 12
-    if msgwindow.x<0
-      @NegativeValue = msgwindow.x
-      msgwindow.x+=(-@NegativeValue)
-    elsif msgwindow.x>88
-      @OpposedValue = msgwindow.x-88
-      msgwindow.x-=@OpposedValue
-    end
-    msgwindow.x += 16
-    if msgwindow.y>282
-      msgwindow.y = $game_map.events[$talkingEvent].screen_y - 144
-      @arrow.y = $game_map.events[$talkingEvent].screen_y - 60 + 10
-      @arrow.bitmap = BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+1] #Point down
-    elsif msgwindow.y<0
-      msgwindow.y = $game_map.events[$talkingEvent].screen_y + @arrow.bitmap.height - 12
-      @arrow.y = $game_map.events[$talkingEvent].screen_y  - 6
-      @arrow.bitmap = BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+2] #Point up
-    end
+  def pbSetBubble
+    if $Bubble >= 1 && $game_map
+          #Default position for most cases
+          @bubble_arrow = ArrowSprite.new(@viewport, $game_map.events[$talkingEvent])
+          @bubble_arrow.setArrowBitmap(BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+1], 2)
+  
+          #Put bubble below if player is talking to NPC from above
+          if $game_player.direction == 2 && @bubble_arrow.talking_event.direction == 8 && $game_player.y == @bubble_arrow.talking_event.y-1
+            @bubble_arrow.setArrowBitmap(BubbleConfig::BUBBLE_BITMAPS[$Bubble*3+2], 8)
+          end
+  
+          self.setSkin(BubbleConfig::BUBBLE_BITMAPS[$Bubble*3])
+          self.width = BubbleConfig::DEFAULT_WIDTH
+          self.height = BubbleConfig::DEFAULT_HEIGHT
+          self.x = @bubble_arrow.x - self.width/2
+          case @bubble_arrow.direction
+          when 2 then
+            self.y = @bubble_arrow.y - self.height + 2*2
+          when 8 then 
+            self.y = @bubble_arrow.y + @bubble_arrow.height - 2*2
+          end
+          
+          #Reset
+          $Bubble=0
+          $talkingEvent=0
+          #arrow.dispose if arrow
+      else
+          #Show regular text box, no speech bubble
+          self.setSkin("Graphics/windowskins/choice 1")
+          self.height = 102
+          self.y = Graphics.height - self.height
+      end
   end
+
+  def pbDisposeBubbleArrow
+    @bubble_arrow.dispose if @bubble_arrow
+  end
+
 end
